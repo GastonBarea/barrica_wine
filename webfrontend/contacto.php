@@ -14,7 +14,7 @@
             <br>
             <input class="form" type="email" name="email" placeholder="*Email" required>
             <br>
-            <textarea class="form formm" name="mensaje" cols="30" rows="8" placeholder="*Dejanos tu cansulta:..."></textarea>
+            <textarea class="form formm" name="mensaje" cols="30" rows="8" placeholder="*Dejanos tu consulta:..."></textarea>
             <p class="conten-center cont">*Todos los campos son oblicatoros</p>
             
             <input class="btn btn-success" type="button" value="Enviar">
