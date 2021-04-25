@@ -18,7 +18,7 @@
             <textarea class="form formm" name="mensaje" cols="30" rows="8" placeholder="*Dejanos tu consulta:..."></textarea>
             <p class="conten-center cont">*Todos los campos son oblicatoros</p>
 =======
-            <textarea class="form formm" name="mensaje" cols="30" rows="8" placeholder="*Dejanos tu cnsulta:..."></textarea>
+            <textarea class="form formm" name="mensaje" cols="30" rows="8" placeholder="*Dejanos tu consulta:..."></textarea>
             <p class="conten-center cont">*Todos los campos son obligatorios</p>
 >>>>>>> c179b9a (error)
             
