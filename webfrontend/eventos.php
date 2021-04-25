@@ -1,4 +1,4 @@
-<?php include_once('include/header.php') /*conecta con archibo header*/?>
+<?php include_once('include/header.php')?>
 
 <section class="vinos">
 
@@ -47,5 +47,4 @@
  </div>
 </section>
 
-
-<?php include_once('include/footer.php') /*conecta con archibo footer*/?>
+<?php include_once('include/footer.php')?>

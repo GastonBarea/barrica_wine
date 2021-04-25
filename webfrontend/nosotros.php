@@ -1,4 +1,4 @@
-<?php include_once('include/header.php') /*conecta con archibo header*/?>
+<?php include_once('include/header.php')?>
 
   <section class="vinos">
 
@@ -30,14 +30,4 @@
      
   </section>
 
-  <aside class="vinos">
-    <div class="container col-sm-12 text-center">
-         
-        <a href="https://www.facebook.com/"><img src="img/facebook.png" width="32"  height="32" alt="facebook" class="redes"></a>
-        <a href="https://www.instagram.com/"><img src="img/instagram.png" width="32"  height="32" alt="instagram" class="redes"></a>
-     
-     </div>
-
-</aside>
-
-<?php include_once('include/footer.php') /*conecta con archibo footer*/?>
+<?php include_once('include/footer.php')?>
