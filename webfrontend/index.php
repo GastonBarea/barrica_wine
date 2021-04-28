@@ -5,7 +5,7 @@
     
      <h1 class="pres">Barrica</h1>
      <h2 class="pres">VINOS Y ALGO MÁS</h2>
-     <a href="html/vinos.html" class="btn-one btn-avino topmargin-sm"><span class="material-icons">shopping_cart</span></a>
+     <a href="html/vinos.html" class="btn-one btn-avino topmargin-sm text-dark"><span class="material-icons" Style="font-size: 4.5em; margin: 0;">shopping_cart</span></a>
   
   </div>
 
@@ -21,9 +21,9 @@
                                 <h3>Card title</h3>
                                 <h4>Chardonay</h4>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="card-link"><span class="material-icons">favorite_border</span></a>
-                                    <a href="#" class="card-link"><span class="material-icons">add_shopping_cart</span></a>
-                                    <a href="#" class="card-link"><span class="material-icons">add_circle_outline</span></a>
+                                    <a href="#" class="card-link text-danger"><span class="material-icons">favorite_border</span></a>
+                                    <a href="#" class="card-link text-dark"><span class="material-icons">add_shopping_cart</span></a>
+                                    <a href="#" class="card-link text-dark"><span class="material-icons">add_circle_outline</span></a>
                             </div>
                         </div>
                     </article>
@@ -36,9 +36,9 @@
                             <h3>Card title</h3>
                             <h4>Chardonay</h4>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="card-link"><span class="material-icons">favorite_border</span></a>
-                                <a href="#" class="card-link"><span class="material-icons">add_shopping_cart</span></a>
-                                <a href="#" class="card-link"><span class="material-icons">add_circle_outline</span></a>
+                                <a href="#" class="card-link text-danger"><span class="material-icons">favorite_border</span></a>
+                                <a href="#" class="card-link text-dark"><span class="material-icons">add_shopping_cart</span></a>
+                                <a href="#" class="card-link text-dark"><span class="material-icons">add_circle_outline</span></a>
                         </div>
                         </div>
                     </article>
@@ -51,9 +51,9 @@
                             <h3>Carta</h3>
                             <h4>Chardonay</h4>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="card-link"><span class="material-icons">favorite_border</span></a>
-                                <a href="#" class="card-link"><span class="material-icons">add_shopping_cart</span></a>
-                                <a href="#" class="card-link"><span class="material-icons">add_circle_outline</span></a>
+                                <a href="#" class="card-link text-danger"><span class="material-icons">favorite_border</span></a>
+                                <a href="#" class="card-link text-dark" style="$purple"><span class="material-icons">add_shopping_cart</span></a>
+                                <a href="#" class="card-link text-dark"><span class="material-icons">add_circle_outline</span></a>
                         </div>
                         </div>
                     </article>
@@ -66,9 +66,9 @@
                             <h3>Card title</h3>
                             <h4>Chardonay</h4>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="card-link"><span class="material-icons">favorite_border</span></a>
-                                <a href="#" class="card-link"><span class="material-icons">add_shopping_cart</span></a>
-                                <a href="#" class="card-link"><span class="material-icons">add_circle_outline</span></a>
+                                <a href="#" class="card-link text-danger"><span class="material-icons">favorite_border</span></a>
+                                <a href="#" class="card-link text-dark"><span class="material-icons">add_shopping_cart</span></a>
+                                <a href="#" class="card-link text-dark"><span class="material-icons">add_circle_outline</span></a>
                         </div>
                         </div>
                     </article>

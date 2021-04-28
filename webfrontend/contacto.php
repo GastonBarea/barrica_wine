@@ -14,13 +14,9 @@
             <br>
             <input class="form" type="email" name="email" placeholder="*Email" required>
             <br>
-<<<<<<< HEAD
             <textarea class="form formm" name="mensaje" cols="30" rows="8" placeholder="*Dejanos tu consulta:..."></textarea>
             <p class="conten-center cont">*Todos los campos son oblicatoros</p>
-=======
-            <textarea class="form formm" name="mensaje" cols="30" rows="8" placeholder="*Dejanos tu consulta:..."></textarea>
-            <p class="conten-center cont">*Todos los campos son obligatorios</p>
->>>>>>> c179b9a (error)
+
             
             <input class="btn btn-success" type="button" value="Enviar">
     </form> 

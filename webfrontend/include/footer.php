@@ -12,8 +12,8 @@
         <div class="col-4">
             <small>Barrica Wine</small>
             <ul class="nav justify-content-center">
-                <li class="small"><a href="#"><span class="material-icons">facebook</span></a></li>
-                <li class="small"><a href="#"><span class="material-icons">share</span></a></li>
+                <li class=""><a href="#"><span class="material-icons text-dark">facebook</span></a></li>
+                <li class=""><a href="#"><span class="material-icons text-dark">share</span></a></li>
             </ul>
         </div>
         <div class="col-4">
