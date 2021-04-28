@@ -9,7 +9,7 @@
    <meta name="description" content="Barrica Wine donde encontrmos vinos con gran bariedad y calidad para su comercializacion. Eventos de cata de vino y cursos">
    <meta name="author" content="Gaston Alan Barea">
    
-   <link rel="short icon" type="imagen/pmg" href="img/nosotros.png">
+   <link rel="short icon" type="imagen/pmg" href="img/bwmin.png">
  
      <title>BarricaWine</title>
     
