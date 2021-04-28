@@ -34,22 +34,62 @@ include_once('include/header.php')?>
                 <div class="row">
                         <div class="col-lg-3 col-md-6 col-sm-12">
                                 <article class="">
-                                    <?php include('card.php')?>
+                                    <div class="card">
+                                        <img src="https://fakeimg.pl/350x200/?text=World&font=lobster" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h3>Carta</h3>
+                                            <h4>Chardonay</h4>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                <a href="#" class="card-link text-danger"><span class="material-icons">favorite_border</span></a>
+                                                <a href="#" class="card-link text-dark" style="$purple"><span class="material-icons">add_shopping_cart</span></a>
+                                                <a href="#" class="card-link text-dark"><span class="material-icons">add_circle_outline</span></a>
+                                        </div>
+                                    </div>
                                 </article>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-12">
                                 <article class="">
-                                    <?php include('card.php')?>
+                                    <div class="card">
+                                        <img src="https://fakeimg.pl/350x200/?text=World&font=lobster" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h3>Carta</h3>
+                                            <h4>Chardonay</h4>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                <a href="#" class="card-link text-danger"><span class="material-icons">favorite_border</span></a>
+                                                <a href="#" class="card-link text-dark" style="$purple"><span class="material-icons">add_shopping_cart</span></a>
+                                                <a href="#" class="card-link text-dark"><span class="material-icons">add_circle_outline</span></a>
+                                        </div>
+                                    </div>
                                 </article>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-12">
                                 <article class="">
-                                    <?php include('card.php')?>
+                                    <div class="card">
+                                        <img src="https://fakeimg.pl/350x200/?text=World&font=lobster" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h3>Carta</h3>
+                                            <h4>Chardonay</h4>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                <a href="#" class="card-link text-danger"><span class="material-icons">favorite_border</span></a>
+                                                <a href="#" class="card-link text-dark" style="$purple"><span class="material-icons">add_shopping_cart</span></a>
+                                                <a href="#" class="card-link text-dark"><span class="material-icons">add_circle_outline</span></a>
+                                        </div>
+                                    </div>
                                 </article>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-12">
                                 <article class="">
-                                    <?php include('card.php')?>
+                                    <div class="card">
+                                        <img src="https://fakeimg.pl/350x200/?text=World&font=lobster" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h3>Carta</h3>
+                                            <h4>Chardonay</h4>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                <a href="#" class="card-link text-danger"><span class="material-icons">favorite_border</span></a>
+                                                <a href="#" class="card-link text-dark" style="$purple"><span class="material-icons">add_shopping_cart</span></a>
+                                                <a href="#" class="card-link text-dark"><span class="material-icons">add_circle_outline</span></a>
+                                        </div>
+                                    </div>
                                 </article>
                         </div>
 
@@ -59,22 +99,62 @@ include_once('include/header.php')?>
                         <div class="row">
                             <div class="col-lg-3 col-md-6 col-sm-12">
                                     <article class="">
-                                        <?php include('card.php')?>
+                                        <div class="card">
+                                        <img src="https://fakeimg.pl/350x200/?text=World&font=lobster" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h3>Carta</h3>
+                                            <h4>Chardonay</h4>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                <a href="#" class="card-link text-danger"><span class="material-icons">favorite_border</span></a>
+                                                <a href="#" class="card-link text-dark" style="$purple"><span class="material-icons">add_shopping_cart</span></a>
+                                                <a href="#" class="card-link text-dark"><span class="material-icons">add_circle_outline</span></a>
+                                        </div>
+                                    </div>
                                     </article>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12">
                                     <article class="">
-                                        <?php include('card.php')?>
+                                        <div class="card">
+                                        <img src="https://fakeimg.pl/350x200/?text=World&font=lobster" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h3>Carta</h3>
+                                            <h4>Chardonay</h4>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                <a href="#" class="card-link text-danger"><span class="material-icons">favorite_border</span></a>
+                                                <a href="#" class="card-link text-dark" style="$purple"><span class="material-icons">add_shopping_cart</span></a>
+                                                <a href="#" class="card-link text-dark"><span class="material-icons">add_circle_outline</span></a>
+                                        </div>
+                                    </div>
                                     </article>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12">
                                     <article class="">
-                                        <?php include('card.php')?>
+                                        <div class="card">
+                                        <img src="https://fakeimg.pl/350x200/?text=World&font=lobster" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h3>Carta</h3>
+                                            <h4>Chardonay</h4>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                <a href="#" class="card-link text-danger"><span class="material-icons">favorite_border</span></a>
+                                                <a href="#" class="card-link text-dark" style="$purple"><span class="material-icons">add_shopping_cart</span></a>
+                                                <a href="#" class="card-link text-dark"><span class="material-icons">add_circle_outline</span></a>
+                                        </div>
+                                    </div>
                                     </article>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12">
                                     <article class="">
-                                        <?php include('card.php')?>
+                                        <div class="card">
+                                        <img src="https://fakeimg.pl/350x200/?text=World&font=lobster" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h3>Carta</h3>
+                                            <h4>Chardonay</h4>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                <a href="#" class="card-link text-danger"><span class="material-icons">favorite_border</span></a>
+                                                <a href="#" class="card-link text-dark" style="$purple"><span class="material-icons">add_shopping_cart</span></a>
+                                                <a href="#" class="card-link text-dark"><span class="material-icons">add_circle_outline</span></a>
+                                        </div>
+                                    </div>
                                     </article>
                             </div>
 
@@ -84,22 +164,62 @@ include_once('include/header.php')?>
                             <div class="row">
                             <div class="col-lg-3 col-md-6 col-sm-12">
                                     <article class="">
-                                        <?php include('card.php')?>
+                                        <div class="card">
+                                        <img src="https://fakeimg.pl/350x200/?text=World&font=lobster" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h3>Carta</h3>
+                                            <h4>Chardonay</h4>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                <a href="#" class="card-link text-danger"><span class="material-icons">favorite_border</span></a>
+                                                <a href="#" class="card-link text-dark" style="$purple"><span class="material-icons">add_shopping_cart</span></a>
+                                                <a href="#" class="card-link text-dark"><span class="material-icons">add_circle_outline</span></a>
+                                        </div>
+                                    </div>
                                     </article>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12">
                                     <article class="">
-                                        <?php include('card.php')?>
+                                        <div class="card">
+                                        <img src="https://fakeimg.pl/350x200/?text=World&font=lobster" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h3>Carta</h3>
+                                            <h4>Chardonay</h4>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                <a href="#" class="card-link text-danger"><span class="material-icons">favorite_border</span></a>
+                                                <a href="#" class="card-link text-dark" style="$purple"><span class="material-icons">add_shopping_cart</span></a>
+                                                <a href="#" class="card-link text-dark"><span class="material-icons">add_circle_outline</span></a>
+                                        </div>
+                                    </div>
                                     </article>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12">
                                     <article class="">
-                                    <?php include('card.php')?>
+                                    <div class="card">
+                                        <img src="https://fakeimg.pl/350x200/?text=World&font=lobster" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h3>Carta</h3>
+                                            <h4>Chardonay</h4>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                <a href="#" class="card-link text-danger"><span class="material-icons">favorite_border</span></a>
+                                                <a href="#" class="card-link text-dark" style="$purple"><span class="material-icons">add_shopping_cart</span></a>
+                                                <a href="#" class="card-link text-dark"><span class="material-icons">add_circle_outline</span></a>
+                                        </div>
+                                    </div>
                                     </article>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12">
                                     <article class="">
-                                        <?php include('card.php')?>
+                                        <div class="card">
+                                        <img src="https://fakeimg.pl/350x200/?text=World&font=lobster" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h3>Carta</h3>
+                                            <h4>Chardonay</h4>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                <a href="#" class="card-link text-danger"><span class="material-icons">favorite_border</span></a>
+                                                <a href="#" class="card-link text-dark" style="$purple"><span class="material-icons">add_shopping_cart</span></a>
+                                                <a href="#" class="card-link text-dark"><span class="material-icons">add_circle_outline</span></a>
+                                        </div>
+                                    </div>
                                     </article>
                             </div>
 
@@ -113,100 +233,7 @@ include_once('include/header.php')?>
         </div>
         
     </section>
+   
 
-
-
-
-<!--------------------------------------------------------------------------------------------------------->
-
-
-
-<div class="container-fluid">
-
-    <!--PRUEBA DE FOR EN PHP-->
-
-    <div class="row">
-    <?php 
-    for($i=0;$i<4;$i++)
-        {echo'
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <article class="">
-                    <div class="card">
-                    <img src="https://fakeimg.pl/350x200/?text=World&font=lobster" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h3>Card title</h3>
-                        <h4>Chardonay</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
-                            <a href="#" class="card-link text-danger"><span class="material-icons">favorite_border</span></a>
-                        <a href="#" class="card-link text-dark"><span class="material-icons">add_shopping_cart</span></a>
-                            <a href="#" class="card-link text-dark"><span class="material-icons">add_circle_outline</span></a>
-                    </div>
-                    </div>
-                </article>
-            </div>
-        ';} 
-    ?>
-    </div>
-
-    <!--PRUEBA DE DO EN PHP-->
-
-    <div class="row">
-    <?php
-    $i=0;
-    do{
-        $i++;
-        {echo'
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <article class="">
-                    <div class="card">
-                    <img src="https://fakeimg.pl/350x200/?text=World&font=lobster" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h3>Card title</h3>
-                        <h4>Chardonay</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
-                            <a href="#" class="card-link text-danger"><span class="material-icons">favorite_border</span></a>
-                        <a href="#" class="card-link text-dark"><span class="material-icons">add_shopping_cart</span></a>
-                            <a href="#" class="card-link text-dark"><span class="material-icons">add_circle_outline</span></a>
-                    </div>
-                    </div>
-                </article>
-            </div>
-        ';} 
-    }while($i<4)
-    ?>
-    </div>
-
-    <!--PRUEBA DE WHILE EN PHP-->
-
-    <div class="row">
-    <?php
-    $i=0;
-    while($i<4){
-        $i++;
-        {echo'
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <article class="">
-                    <div class="card">
-                    <img src="https://fakeimg.pl/350x200/?text=World&font=lobster" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h3>Card title</h3>
-                        <h4>Chardonay</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
-                            <a href="#" class="card-link text-danger"><span class="material-icons">favorite_border</span></a>
-                        <a href="#" class="card-link text-dark"><span class="material-icons">add_shopping_cart</span></a>
-                            <a href="#" class="card-link text-dark"><span class="material-icons">add_circle_outline</span></a>
-                    </div>
-                    </div>
-                </article>
-            </div>
-        ';} 
-    }
-    ?>
-    </div>
-
-
-
-
-</div>
 
 <?php include_once('include/footer.php')?>
