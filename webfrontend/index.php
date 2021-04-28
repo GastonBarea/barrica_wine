@@ -1,4 +1,6 @@
-<?php include_once('include/header.php')?>
+<?php 
+$seccion = 'Home';
+include_once('include/header.php')?>
   
   <section class="inicio">
    <div class="container conten-center rounded img-fluid">

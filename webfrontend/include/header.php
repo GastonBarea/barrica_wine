@@ -47,23 +47,23 @@
                 
                     <ul class="navbar-nav ml-auto">   
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php">
-                            <span class="material-icons">home</span>Home</a>
+                            <a class="nav-link" style="<?php echo ($seccion=='Home')?'color: #7E57C2;':''; ?>" href="index.php">
+                            <span class="material-icons" >home</span>Home</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="vinos.php">
+                            <a class="nav-link" style="<?php echo ($seccion=='NuestrosVinos')?'color: #7E57C2;':''; ?>" href="vinos.php">
                             <span class="material-icons">wine_bar</span>Nuestros Vinos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="nosotros.php">
+                            <a class="nav-link" style="<?php echo ($seccion=='Nosotros')?'color: #7E57C2;':''; ?>" href="nosotros.php">
                             <span class="material-icons">apartment</span>Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="eventos.php">
+                            <a class="nav-link" style="<?php echo ($seccion=='Eventos')?'color: #7E57C2;':''; ?>" href="eventos.php">
                             <span class="material-icons">event</span>Eventos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contacto.php">
+                            <a class="nav-link" style="<?php echo ($seccion=='Contacto')?'color: #7E57C2;':''; ?>" href="contacto.php">
                             <span class="material-icons">contact_page</span>Contacto</a>
                         </li>
                     </ul>

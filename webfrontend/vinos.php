@@ -1,4 +1,6 @@
-<?php include_once('include/header.php')?>
+<?php 
+$seccion = 'NuestrosVinos';
+include_once('include/header.php')?>
 
     <section class="vinos">
         <div class="container-fluid">

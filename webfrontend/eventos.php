@@ -1,4 +1,6 @@
-<?php include_once('include/header.php')?>
+<?php 
+$seccion = 'Eventos';
+include_once('include/header.php')?>
 
 <section class="vinos">
 
