@@ -1,14 +1,19 @@
-include_once('include/footer.php')
+
 
 <!-- Menú Footer -->
   <footer class="main-footer">
     <!-- A la derecha -->
     <div class="float-right d-none d-sm-inline">
-      Anything you want
+      UN BUEN VINO
     </div>
     <!-- Por defecto a la izquierda -->
-    <p><strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>. </strong>All rights reserved.</p>
+    <p><strong>Copyright &copy; 2014-2021 <a href="#">Barrica Wine</a>. </strong>All rights reserved.</p>
   </footer>
+
+
+
+
+
 </div>
 <!-- ./wrapper -->
 
