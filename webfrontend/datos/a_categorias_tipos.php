@@ -1,6 +1,6 @@
 <?php
 
-$categorisa_tipos = array(
+$categorias_tipos = array(
     /*Según el color*/
     '1' => array(
         'id' => 1,
@@ -170,7 +170,11 @@ $categorisa_tipos = array(
 );
 
 
+
 /*fuente: https://escuelaversailles.com/tipos-de-vino/*/
 
+/*pruebas
+echo $categorias_tipos[3]['nombre'];
+*/
 
 ?>
