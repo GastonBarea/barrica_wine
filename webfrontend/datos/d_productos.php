@@ -2,8 +2,8 @@
 
 include('a_categorias_tipos.php');
 include('b_categorias_uvas.php');
-$data = file_get_contents("c_marcas_bodegas.json");
-$marcas = json_decode($data, true);
+//$data = file_get_contents("c_marcas_bodegas.json");
+//$marcas = json_decode($data, true);
 
 $productos = array(
     '1' => array(
@@ -12,8 +12,8 @@ $productos = array(
         'precio' => '1500',
         'cosecha' => '2011',
         'categotiaTipo' => $categorias_tipos[3]['nombre'],//tinto
-        'categotiaUva' => $categorias_uvas[3]['nombre'],
-        'marca' => $marcas [3]['Bodegas'],
+        'categotiaUva' => $categorias_uvas[12]['nombre'],
+        //'marca' => $marcas [3]['Bodegas'],
         'descripcion' => 'De una cuidadosa elección',
         'activa' => TRUE
     ),
@@ -23,8 +23,8 @@ $productos = array(
         'precio' => '1500',
         'cosecha' => '2011',
         'categotiaTipo' => $categorias_tipos[3]['nombre'],//tinto
-        'categotiaUva' => $categorias_uvas[3]['nombre'],
-        'marca' => $marcas [3]['Bodegas'],
+        'categotiaUva' => $categorias_uvas[11]['nombre'],
+        //'marca' => $marcas [3]['Bodegas'],
         'descripcion' => 'De una cuidadosa elección',
         'activa' => TRUE
     ),
@@ -34,8 +34,8 @@ $productos = array(
         'precio' => '1500',
         'cosecha' => '2011',
         'categotiaTipo' => $categorias_tipos[3]['nombre'],//tinto
-        'categotiaUva' => $categorias_uvas[3]['nombre'],
-        'marca' => $marcas [3]['Bodegas'],
+        'categotiaUva' => $categorias_uvas[10]['nombre'],
+        //'marca' => $marcas [3]['Bodegas'],
         'descripcion' => 'De una cuidadosa elección',
         'activa' => TRUE
     ),
@@ -45,8 +45,8 @@ $productos = array(
         'precio' => '1500',
         'cosecha' => '2011',
         'categotiaTipo' => $categorias_tipos[3]['nombre'],//tinto
-        'categotiaUva' => $categorias_uvas[3]['nombre'],
-        'marca' => $marcas [3]['Bodegas'],
+        'categotiaUva' => $categorias_uvas[9]['nombre'],
+        //'marca' => $marcas [3]['Bodegas'],
         'descripcion' => 'De una cuidadosa elección',
         'activa' => TRUE
     ),
@@ -56,8 +56,8 @@ $productos = array(
         'precio' => '1500',
         'cosecha' => '2011',
         'categotiaTipo' => $categorias_tipos[3]['nombre'],//tinto
-        'categotiaUva' => $categorias_uvas[3]['nombre'],
-        'marca' => $marcas [3]['Bodegas'],
+        'categotiaUva' => $categorias_uvas[8]['nombre'],
+        //'marca' => $marcas [3]['Bodegas'],
         'descripcion' => 'De una cuidadosa elección',
         'activa' => TRUE
     ),
@@ -67,8 +67,8 @@ $productos = array(
         'precio' => '1500',
         'cosecha' => '2011',
         'categotiaTipo' => $categorias_tipos[3]['nombre'],//tinto
-        'categotiaUva' => $categorias_uvas[3]['nombre'],
-        'marca' => $marcas [3]['Bodegas'],
+        'categotiaUva' => $categorias_uvas[7]['nombre'],
+        //'marca' => $marcas [3]['Bodegas'],
         'descripcion' => 'De una cuidadosa elección',
         'activa' => TRUE
     ),
@@ -78,8 +78,8 @@ $productos = array(
         'precio' => '1500',
         'cosecha' => '2011',
         'categotiaTipo' => $categorias_tipos[1]['nombre'],//blanco
-        'categotiaUva' => $categorias_uvas[3]['nombre'],
-        'marca' => $marcas [3]['Bodegas'],
+        'categotiaUva' => $categorias_uvas[6]['nombre'],
+        //'marca' => $marcas [3]['Bodegas'],
         'descripcion' => 'De una cuidadosa elección',
         'activa' => TRUE
     ),
@@ -89,8 +89,8 @@ $productos = array(
         'precio' => '1500',
         'cosecha' => '2011',
         'categotiaTipo' => $categorias_tipos[1]['nombre'],//blanco
-        'categotiaUva' => $categorias_uvas[3]['nombre'],
-        'marca' => $marcas [3]['Bodegas'],
+        'categotiaUva' => $categorias_uvas[5]['nombre'],
+        //'marca' => $marcas [3]['Bodegas'],
         'descripcion' => 'De una cuidadosa elección',
         'activa' => TRUE
     ),
@@ -100,8 +100,8 @@ $productos = array(
         'precio' => '1500',
         'cosecha' => '2011',
         'categotiaTipo' => $categorias_tipos[1]['nombre'],//blanco
-        'categotiaUva' => $categorias_uvas[3]['nombre'],
-        'marca' => $marcas [3]['Bodegas'],
+        'categotiaUva' => $categorias_uvas[4]['nombre'],
+        //'marca' => $marcas [3]['Bodegas'],
         'descripcion' => 'De una cuidadosa elección',
         'activa' => TRUE
     ),
@@ -112,7 +112,7 @@ $productos = array(
         'cosecha' => '2011',
         'categotiaTipo' => $categorias_tipos[1]['nombre'],//blanco
         'categotiaUva' => $categorias_uvas[3]['nombre'],
-        'marca' => $marcas [3]['Bodegas'],
+        //'marca' => $marcas [3]['Bodegas'],
         'descripcion' => 'De una cuidadosa elección',
         'activa' => TRUE
     ),
@@ -122,8 +122,8 @@ $productos = array(
         'precio' => '1500',
         'cosecha' => '2011',
         'categotiaTipo' => $categorias_tipos[2]['nombre'],//rosado
-        'categotiaUva' => $categorias_uvas[3]['nombre'],
-        'marca' => $marcas [3]['Bodegas'],
+        'categotiaUva' => $categorias_uvas[2]['nombre'],
+        //'marca' => $marcas [3]['Bodegas'],
         'descripcion' => 'De una cuidadosa elección',
         'activa' => TRUE
     ),
@@ -133,18 +133,18 @@ $productos = array(
         'precio' => '1500',
         'cosecha' => '2011',
         'categotiaTipo' => $categorias_tipos[2]['nombre'],//rosado
-        'categotiaUva' => $categorias_uvas[3]['nombre'],
-        'marca' => $marcas [3]['Bodegas'],
+        'categotiaUva' => $categorias_uvas[1]['nombre'],
+        //'marca' => $marcas [3]['Bodegas'],
         'descripcion' => 'De una cuidadosa elección',
         'activa' => TRUE
     )
 );
 
-/*Prueba*/
+/*Prueba
 foreach ($productos as $producto) {
     echo '<pre>';
     print_r($producto);
     echo '</pre>';
 }
-
+*/
 ?>
