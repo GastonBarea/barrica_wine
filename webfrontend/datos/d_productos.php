@@ -1,5 +1,9 @@
 <?php
 
+include('a_categorias_tipos.php');
+include('b_categorias_uvas.php');
+$data = file_get_contents("c_marcas_bodegas.json");
+$marcas = json_decode($data, true);
 
 $productos = array(
     '1' => array(
@@ -7,9 +11,9 @@ $productos = array(
         'nombre' => 'Vino Otoñal',
         'precio' => '1500',
         'cosecha' => '2011',
-        'categotiaTipo' => '',
-        'categotiaUva' => '',
-        'marca' => '',
+        'categotiaTipo' => $categorias_tipos[3]['nombre'],
+        'categotiaUva' => $categorias_uvas[3]['nombre'],
+        'marca' => $marcas [3]['Bodegas'],
         'descripcion' => '',
         'activa' => TRUE
     ),
