@@ -173,8 +173,5 @@ $categorias_tipos = array(
 
 /*fuente: https://escuelaversailles.com/tipos-de-vino/*/
 
-/*pruebas
-echo $categorias_tipos[3]['nombre'];
-*/
 
 ?>

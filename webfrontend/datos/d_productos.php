@@ -11,10 +11,10 @@ $productos = array(
         'nombre' => 'Vino Otoñal',
         'precio' => '1500',
         'cosecha' => '2011',
-        'categotiaTipo' => $categorias_tipos[3]['nombre'],
+        'categotiaTipo' => $categorias_tipos[3]['nombre'],//tinto
         'categotiaUva' => $categorias_uvas[3]['nombre'],
         'marca' => $marcas [3]['Bodegas'],
-        'descripcion' => '',
+        'descripcion' => 'De una cuidadosa elección',
         'activa' => TRUE
     ),
     '2' => array(
@@ -22,10 +22,10 @@ $productos = array(
         'nombre' => 'Vino Otoñal',
         'precio' => '1500',
         'cosecha' => '2011',
-        'categotiaTipo' => '',
-        'categotiaUva' => '',
-        'marca' => '',
-        'descripcion' => '',
+        'categotiaTipo' => $categorias_tipos[3]['nombre'],//tinto
+        'categotiaUva' => $categorias_uvas[3]['nombre'],
+        'marca' => $marcas [3]['Bodegas'],
+        'descripcion' => 'De una cuidadosa elección',
         'activa' => TRUE
     ),
     '3' => array(
@@ -33,10 +33,10 @@ $productos = array(
         'nombre' => 'Vino Otoñal',
         'precio' => '1500',
         'cosecha' => '2011',
-        'categotiaTipo' => '',
-        'categotiaUva' => '',
-        'marca' => '',
-        'descripcion' => '',
+        'categotiaTipo' => $categorias_tipos[3]['nombre'],//tinto
+        'categotiaUva' => $categorias_uvas[3]['nombre'],
+        'marca' => $marcas [3]['Bodegas'],
+        'descripcion' => 'De una cuidadosa elección',
         'activa' => TRUE
     ),
     '4' => array(
@@ -44,10 +44,10 @@ $productos = array(
         'nombre' => 'Vino Otoñal',
         'precio' => '1500',
         'cosecha' => '2011',
-        'categotiaTipo' => '',
-        'categotiaUva' => '',
-        'marca' => '',
-        'descripcion' => '',
+        'categotiaTipo' => $categorias_tipos[3]['nombre'],//tinto
+        'categotiaUva' => $categorias_uvas[3]['nombre'],
+        'marca' => $marcas [3]['Bodegas'],
+        'descripcion' => 'De una cuidadosa elección',
         'activa' => TRUE
     ),
     '5' => array(
@@ -55,10 +55,10 @@ $productos = array(
         'nombre' => 'Vino Otoñal',
         'precio' => '1500',
         'cosecha' => '2011',
-        'categotiaTipo' => '',
-        'categotiaUva' => '',
-        'marca' => '',
-        'descripcion' => '',
+        'categotiaTipo' => $categorias_tipos[3]['nombre'],//tinto
+        'categotiaUva' => $categorias_uvas[3]['nombre'],
+        'marca' => $marcas [3]['Bodegas'],
+        'descripcion' => 'De una cuidadosa elección',
         'activa' => TRUE
     ),
     '6' => array(
@@ -66,10 +66,10 @@ $productos = array(
         'nombre' => 'Vino Otoñal',
         'precio' => '1500',
         'cosecha' => '2011',
-        'categotiaTipo' => '',
-        'categotiaUva' => '',
-        'marca' => '',
-        'descripcion' => '',
+        'categotiaTipo' => $categorias_tipos[3]['nombre'],//tinto
+        'categotiaUva' => $categorias_uvas[3]['nombre'],
+        'marca' => $marcas [3]['Bodegas'],
+        'descripcion' => 'De una cuidadosa elección',
         'activa' => TRUE
     ),
     '7' => array(
@@ -77,10 +77,10 @@ $productos = array(
         'nombre' => 'Vino Otoñal',
         'precio' => '1500',
         'cosecha' => '2011',
-        'categotiaTipo' => '',
-        'categotiaUva' => '',
-        'marca' => '',
-        'descripcion' => '',
+        'categotiaTipo' => $categorias_tipos[1]['nombre'],//blanco
+        'categotiaUva' => $categorias_uvas[3]['nombre'],
+        'marca' => $marcas [3]['Bodegas'],
+        'descripcion' => 'De una cuidadosa elección',
         'activa' => TRUE
     ),
     '8' => array(
@@ -88,10 +88,10 @@ $productos = array(
         'nombre' => 'Vino Otoñal',
         'precio' => '1500',
         'cosecha' => '2011',
-        'categotiaTipo' => '',
-        'categotiaUva' => '',
-        'marca' => '',
-        'descripcion' => '',
+        'categotiaTipo' => $categorias_tipos[1]['nombre'],//blanco
+        'categotiaUva' => $categorias_uvas[3]['nombre'],
+        'marca' => $marcas [3]['Bodegas'],
+        'descripcion' => 'De una cuidadosa elección',
         'activa' => TRUE
     ),
     '9' => array(
@@ -99,10 +99,10 @@ $productos = array(
         'nombre' => 'Vino Otoñal',
         'precio' => '1500',
         'cosecha' => '2011',
-        'categotiaTipo' => '',
-        'categotiaUva' => '',
-        'marca' => '',
-        'descripcion' => '',
+        'categotiaTipo' => $categorias_tipos[1]['nombre'],//blanco
+        'categotiaUva' => $categorias_uvas[3]['nombre'],
+        'marca' => $marcas [3]['Bodegas'],
+        'descripcion' => 'De una cuidadosa elección',
         'activa' => TRUE
     ),
     '10' => array(
@@ -110,18 +110,41 @@ $productos = array(
         'nombre' => 'Vino Otoñal',
         'precio' => '1500',
         'cosecha' => '2011',
-        'categotiaTipo' => '',
-        'categotiaUva' => '',
-        'marca' => '',
-        'descripcion' => '',
+        'categotiaTipo' => $categorias_tipos[1]['nombre'],//blanco
+        'categotiaUva' => $categorias_uvas[3]['nombre'],
+        'marca' => $marcas [3]['Bodegas'],
+        'descripcion' => 'De una cuidadosa elección',
+        'activa' => TRUE
+    ),
+    '11' => array(
+        'id' => 11,
+        'nombre' => 'Vino Otoñal',
+        'precio' => '1500',
+        'cosecha' => '2011',
+        'categotiaTipo' => $categorias_tipos[2]['nombre'],//rosado
+        'categotiaUva' => $categorias_uvas[3]['nombre'],
+        'marca' => $marcas [3]['Bodegas'],
+        'descripcion' => 'De una cuidadosa elección',
+        'activa' => TRUE
+    ),
+    '12' => array(
+        'id' => 12,
+        'nombre' => 'Vino Otoñal',
+        'precio' => '1500',
+        'cosecha' => '2011',
+        'categotiaTipo' => $categorias_tipos[2]['nombre'],//rosado
+        'categotiaUva' => $categorias_uvas[3]['nombre'],
+        'marca' => $marcas [3]['Bodegas'],
+        'descripcion' => 'De una cuidadosa elección',
         'activa' => TRUE
     )
 );
 
-
-
-
-
-
+/*Prueba*/
+foreach ($productos as $producto) {
+    echo '<pre>';
+    print_r($producto);
+    echo '</pre>';
+}
 
 ?>
