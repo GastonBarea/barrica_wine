@@ -1,5 +1,10 @@
 <?php
 
+/*
+Los productos los sacamos de: http://www.debarricas.com.ar/index.php
+*/
+
+
 include('a_categorias_tipos.php');
 include('b_categorias_uvas.php');
 //$data = file_get_contents("c_marcas_bodegas.json");
