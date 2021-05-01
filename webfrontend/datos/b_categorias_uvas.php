@@ -120,6 +120,14 @@ $categorias_uvas = array(
         'descripcion' => 'Variedad originaria de Francia que tampoco es muy abundante. Sus tonos son frutados, con unos aromas muy intensos a duraznos, melón y especias. Presenta una fuerte estructura y un final largo en boca.',
         'activa' => TRUE
     
+    ), 
+    '16' => array(
+        'id' => 16,
+        'nombre' => 'Blend',
+        'tipoVino' =>$categorias_tipos[1]['nombre'],
+        'descripcion' => 'Un vino de corte (o blend, o assamblage, o multivarietal) es aquel conformado por dos o más tipos de uvas, donde ninguna de ellas tiene una predominancia del 85% o más.',
+        'activa' => TRUE
+    
     )
 
 );

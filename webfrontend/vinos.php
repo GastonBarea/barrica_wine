@@ -2,6 +2,7 @@
 $seccion = 'NuestrosVinos';
 include_once('include/header.php');
 include_once('datos/d_productos.php');
+
 ?>
 
     <section class="vinos">
@@ -18,7 +19,7 @@ include_once('datos/d_productos.php');
                 <div class="col-lg-3 col-md-6 col-sm-12">
                         <article class="">
                             <div class="card">
-                                <img src="https://fakeimg.pl/350x200/?text=World&font=lobster" class="card-img-top" alt="...">
+                                <img src="<?php echo $producto['imagenLG'];?>" alt="...">
                                 <div class="card-body">
                                     <h3><?php echo $producto['nombre'];?></h3>
                                     <h4><?php echo $producto['categotiaUva'];?></h4>
