@@ -1,5 +1,4 @@
 <?php
-
 include('a_categorias_tipos.php');
 
 $categorias_uvas = array(

@@ -3,12 +3,13 @@
 /*
 Los productos los sacamos de: http://www.debarricas.com.ar/index.php
 */
-
-
+include_once('config/config.php');
 include('a_categorias_tipos.php');
 include('b_categorias_uvas.php');
-//$data = file_get_contents("c_marcas_bodegas.json");
-//$marcas = json_decode($data, true);
+$data = file_get_contents(DIR_BASE."/datos/c_marcas_bodegas.json");
+$marcas = json_decode($data, true);
+
+//foreach($marcas as $marca){ echo $marca['Bodegas']."<br>"; };
 
 $productos = array(
     '1' => array(
@@ -19,12 +20,13 @@ $productos = array(
         'cosecha' => '',
         'categotiaTipo' => $categorias_tipos[3]['nombre'],//Tinto
         'categotiaUva' => $categorias_uvas[1]['nombre'],//Malbec
-        //'marca' => $marcas [98]['Bodegas'],//Luigi Bosca
+        'marca' => $marcas [98]['Bodegas'],//Luigi Bosca
         'descripcion' => 'De una cuidadosa elección',
         'imagenLG' => 'https://fakeimg.pl/350x200/?text=World&font=lobster',//luigi-bosca-malbec-doc-2013_2718_lg.jpg
         'imagenSM' => '',//luigi-bosca-malbec-doc-2013_2718_th.jpg
         'activa' => TRUE,
-        'favoritoLike' => 120
+        'favoritoLike' => 120,
+        'comentarios' => array('idUsuario' =>'', 'comentario' => ''),
     ),
     '2' => array(
         'id' => 2,
@@ -34,12 +36,13 @@ $productos = array(
         'cosecha' => '',
         'categotiaTipo' => $categorias_tipos[3]['nombre'],//Tinto
         'categotiaUva' => $categorias_uvas[1]['nombre'],//Malbec
-        //'marca' => $marcas [65]['Bodegas'],//Escorihuela Gascon
+        'marca' => $marcas [65]['Bodegas'],//Escorihuela Gascon
         'descripcion' => 'De una cuidadosa elección',
         'imagenLG' => 'https://fakeimg.pl/350x200/?text=World&font=lobster',//escorihuela-gascon-malbec_7944_lg.png 
         'imagenSM' => '',//escorihuela-gascon-malbec_7944_th.png
         'activa' => TRUE,
-        'favoritoLike' => 315
+        'favoritoLike' => 315,
+        'comentarios' => array('idUsuario' =>'', 'comentario' => ''),
     ),
     '3' => array(
         'id' => 3,
@@ -49,12 +52,13 @@ $productos = array(
         'cosecha' => '',
         'categotiaTipo' => $categorias_tipos[3]['nombre'],//tinto
         'categotiaUva' => $categorias_uvas[3]['nombre'],//Cabernet Sauvignon
-        //'marca' => $marcas [98]['Bodegas'],//Luigi Bosca
+        'marca' => $marcas [98]['Bodegas'],//Luigi Bosca
         'descripcion' => 'De una cuidadosa elección',
         'imagenLG' => 'https://fakeimg.pl/350x200/?text=World&font=lobster',//luigi-bosca-cabernet-750_7384_lg.jpg
         'imagenSM' => '',//luigi-bosca-cabernet-750_7384_th.jpg
         'activa' => TRUE,
-        'favoritoLike' => 211
+        'favoritoLike' => 211,
+        'comentarios' => array('idUsuario' =>'', 'comentario' => ''),
     ),
     '4' => array(
         'id' => 4,
@@ -64,12 +68,13 @@ $productos = array(
         'cosecha' => '',
         'categotiaTipo' => $categorias_tipos[3]['nombre'],//tinto
         'categotiaUva' => $categorias_uvas[16]['nombre'],//Blend
-        //'marca' => $marcas [137]['Bodegas'],//Salentein
+        'marca' => $marcas [137]['Bodegas'],//Salentein
         'descripcion' => 'De una cuidadosa elección',
         'imagenLG' => 'https://fakeimg.pl/350x200/?text=World&font=lobster',//salentein-gran-vu-blend_9390_lg.png
         'imagenSM' => '',//salentein-gran-vu-blend_9390_th.png
         'activa' => TRUE,
-        'favoritoLike' => 123
+        'favoritoLike' => 123,
+        'comentarios' => array('idUsuario' =>'', 'comentario' => ''),
     ),
     '5' => array(
         'id' => 5,
@@ -79,12 +84,13 @@ $productos = array(
         'cosecha' => '',
         'categotiaTipo' => $categorias_tipos[3]['nombre'],//tinto
         'categotiaUva' => $categorias_uvas[2]['nombre'],//Bonarda
-        //'marca' => $marcas [31]['Bodegas'],//Catena Zapata
+        'marca' => $marcas [31]['Bodegas'],//Catena Zapata
         'descripcion' => 'De una cuidadosa elección',
         'imagenLG' => 'https://fakeimg.pl/350x200/?text=World&font=lobster',//el-enemigo-bonarda_125_lg.jpg
         'imagenSM' => '',//el-enemigo-bonarda_125_th.jpg
         'activa' => TRUE,
-        'favoritoLike' => 10
+        'favoritoLike' => 10,
+        'comentarios' => array('idUsuario' =>'', 'comentario' => ''),
     ),
     '6' => array(
         'id' => 6,
@@ -94,12 +100,13 @@ $productos = array(
         'cosecha' => '',
         'categotiaTipo' => $categorias_tipos[3]['nombre'],//tinto
         'categotiaUva' => $categorias_uvas[4]['nombre'],//Merlot
-        //'marca' => $marcas [136]['Bodegas'],//Rutini
+        'marca' => $marcas [136]['Bodegas'],//Rutini
         'descripcion' => 'De una cuidadosa elección',
         'imagenLG' => 'https://fakeimg.pl/350x200/?text=World&font=lobster',//merlot_438_lg.jpg
         'imagenSM' => '',//merlot_438_th.jpg
         'activa' => TRUE,
-        'favoritoLike' => 25
+        'favoritoLike' => 25,
+        'comentarios' => array('idUsuario' =>'', 'comentario' => ''),
     ),
     '7' => array(
         'id' => 7,
@@ -109,12 +116,13 @@ $productos = array(
         'cosecha' => '',
         'categotiaTipo' => $categorias_tipos[1]['nombre'],//blanco
         'categotiaUva' => $categorias_uvas[11]['nombre'],//Chardonnay
-        //'marca' => $marcas [98]['Bodegas'],//Luigi Bosca
+        'marca' => $marcas [98]['Bodegas'],//Luigi Bosca
         'descripcion' => 'De una cuidadosa elección',
         'imagenLG' => 'https://fakeimg.pl/350x200/?text=World&font=lobster',//luigi-bosca-chardonnay-750_3638_lg.jpg
         'imagenSM' => '',//luigi-bosca-chardonnay-750_3638_th.jpg
         'activa' => TRUE,
-        'favoritoLike' => 33
+        'favoritoLike' => 33,
+        'comentarios' => array('idUsuario' =>'', 'comentario' => ''),
     ),
     '8' => array(
         'id' => 8,
@@ -124,12 +132,13 @@ $productos = array(
         'cosecha' => '',
         'categotiaTipo' => $categorias_tipos[1]['nombre'],//blanco
         'categotiaUva' => $categorias_uvas[11]['nombre'],//Chardonnay
-        //'marca' => $marcas [136]['Bodegas'],//Rutini
+        'marca' => $marcas [136]['Bodegas'],//Rutini
         'descripcion' => 'De una cuidadosa elección',
         'imagenLG' => 'https://fakeimg.pl/350x200/?text=World&font=lobster',//rutini-chardonnay-750_4105_lg.jpg
         'imagenSM' => '',//rutini-chardonnay-750_4105_th.jpg
         'activa' => TRUE,
-        'favoritoLike' => 45
+        'favoritoLike' => 45,
+        'comentarios' => array('idUsuario' =>'', 'comentario' => ''),
     ),
     '9' => array(
         'id' => 9,
@@ -139,12 +148,13 @@ $productos = array(
         'cosecha' => '',
         'categotiaTipo' => $categorias_tipos[1]['nombre'],//blanco
         'categotiaUva' => $categorias_uvas[10]['nombre'],//Semillón
-        //'marca' => $marcas [105]['Bodegas'],//Mendel
+        'marca' => $marcas [105]['Bodegas'],//Mendel
         'descripcion' => 'De una cuidadosa elección',
         'imagenLG' => 'https://fakeimg.pl/350x200/?text=World&font=lobster',//mendel-semillon-750_3980_lg.jpg
         'imagenSM' => '',//mendel-semillon-750_3980_th.jpg
         'activa' => TRUE,
-        'favoritoLike' => 98
+        'favoritoLike' => 98,
+        'comentarios' => array('idUsuario' =>'', 'comentario' => ''),
     ),
     '10' => array(
         'id' => 10,
@@ -154,12 +164,13 @@ $productos = array(
         'cosecha' => '',
         'categotiaTipo' => $categorias_tipos[1]['nombre'],//blanco
         'categotiaUva' => $categorias_uvas[12]['nombre'],//Torrontés
-        //'marca' => $marcas [21]['Bodegas'],//Bodegas Etchart
+        'marca' => $marcas [21]['Bodegas'],//Bodegas Etchart
         'descripcion' => 'De una cuidadosa elección',
         'imagenLG' => 'https://fakeimg.pl/350x200/?text=World&font=lobster',//gran-linaje-torrontes-750_2459_lg.jpg
         'imagenSM' => '',//gran-linaje-torrontes-750_2459_th.jpg
         'activa' => TRUE,
-        'favoritoLike' => 188
+        'favoritoLike' => 188,
+        'comentarios' => array('idUsuario' =>'', 'comentario' => ''),
     ),
     '11' => array(
         'id' => 11,
@@ -169,12 +180,13 @@ $productos = array(
         'cosecha' => '',
         'categotiaTipo' => $categorias_tipos[2]['nombre'],//rosado
         'categotiaUva' => $categorias_uvas[1]['nombre'],//Malbec
-        //'marca' => $marcas [82]['Bodegas'],//Humberto Canale
+        'marca' => $marcas [82]['Bodegas'],//Humberto Canale
         'descripcion' => 'De una cuidadosa elección',
         'imagenLG' => 'https://fakeimg.pl/350x200/?text=World&font=lobster',//humberto-canale-blush_4610_lg.jpg
         'imagenSM' => '',//humberto-canale-blush_4610_th.jpg
         'activa' => TRUE,
-        'favoritoLike' => 95
+        'favoritoLike' => 95,
+        'comentarios' => array('idUsuario' =>'', 'comentario' => ''),
     ),
     '12' => array(
         'id' => 12,
@@ -184,16 +196,17 @@ $productos = array(
         'cosecha' => '',
         'categotiaTipo' => $categorias_tipos[2]['nombre'],//rosado
         'categotiaUva' => $categorias_uvas[1]['nombre'],//Malbec
-        //'marca' => $marcas [64]['Bodegas'],//Ernesto Cateba
+        'marca' => $marcas [64]['Bodegas'],//Ernesto Cateba
         'descripcion' => 'De una cuidadosa elección',
         'imagenLG' => 'https://fakeimg.pl/350x200/?text=World&font=lobster',//padrillos-rosado_175_lg.jpg
         'imagenSM' => '',//padrillos-rosado_175_th.jpg
         'activa' => TRUE,
-        'favoritoLike' => 62
+        'favoritoLike' => 62,
+        'comentarios' => array('idUsuario' =>'', 'comentario' => '')
     )
 );
 
-/*Prueba
+/*Prueva
 foreach ($productos as $producto) {
     echo '<pre>';
     print_r($producto);

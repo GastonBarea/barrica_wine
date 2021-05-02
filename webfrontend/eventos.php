@@ -1,6 +1,7 @@
 <?php 
 $seccion = 'Eventos';
-include_once('include/header.php')?>
+include_once('config/config.php');
+include_once(DIR_BASE.'include/header.php')?>
 
 <section class="vinos">
 
@@ -49,4 +50,4 @@ include_once('include/header.php')?>
  </div>
 </section>
 
-<?php include_once('include/footer.php')?>
+<?php include_once(DIR_BASE.'include/footer.php')?>

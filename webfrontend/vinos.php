@@ -1,6 +1,7 @@
 <?php 
 $seccion = 'NuestrosVinos';
-include_once('include/header.php');
+include_once('config/config.php');
+include_once(DIR_BASE.'include/header.php');
 include_once('datos/d_productos.php');
 
 ?>
@@ -37,4 +38,4 @@ include_once('datos/d_productos.php');
    
     </section>
 
-<?php include_once('include/footer.php')?>
+<?php include_once(DIR_BASE.'include/footer.php')?>

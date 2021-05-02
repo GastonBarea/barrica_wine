@@ -1,6 +1,8 @@
 <?php 
 $seccion = 'Home';
-include_once('include/header.php')?>
+include_once('config/config.php');
+include_once(DIR_BASE.'include/header.php')
+?>
   
   <section class="inicio">
    <div class="container conten-center rounded img-fluid">
@@ -235,4 +237,4 @@ include_once('include/header.php')?>
    
 
 
-<?php include_once('include/footer.php')?>
+<?php include_once(DIR_BASE.'include/footer.php')?>
