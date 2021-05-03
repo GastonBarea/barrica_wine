@@ -1,3 +1,6 @@
+
+<?php include_once('config/config.php'); ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -47,7 +50,7 @@
                 
                     <ul class="navbar-nav ml-auto">   
                         <li class="nav-item">
-                            <a class="nav-link" style="<?php echo ($seccion=='Home')?'color: #7E57C2;':''; ?>" href="index.php">
+                            <a class="nav-link" style="<?php echo ($seccion=='Home')?'color: #7E57C2;':''; ?>" href="<?php echo "index.php";?>">
                             <span class="material-icons" >home</span>Home</a>
                         </li>
                         <li class="nav-item dropdown">
