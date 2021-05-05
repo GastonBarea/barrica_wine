@@ -1,14 +1,23 @@
 <?php 
 $seccion = 'Home';
-include_once('include/header.php')?>
+include_once('config/config.php');
+include_once(DIR_BASE.'include/header.php')
+?>
   
   <section class="inicio">
    <div class="container conten-center rounded img-fluid">
     
      <h1 class="pres">Barrica</h1>
      <h2 class="pres">VINOS Y ALGO MÁS</h2>
-     <a href="html/vinos.html" class="btn-one btn-avino topmargin-sm text-dark"><span class="material-icons" Style="font-size: 4.5em; margin: 0;">shopping_cart</span></a>
+     
+     <a href="#" class="btn-one btn-avino topmargin-sm text-dark" onclick="avinos()"><span class="material-icons" Style="font-size: 4.5em; margin: 0;">shopping_cart</span></a>
   
+<script>
+function avinos() {
+  window.open('vinos.php', '_blank');
+}
+</script>
+
   </div>
 
   </section>
@@ -32,21 +41,29 @@ include_once('include/header.php')?>
         <div class="carousel-inner p-4">
             <div class="carousel-item active">
                 <div class="row"><!--carrusel 1------------------------------------------------------------------------------------->
-                        <div class="col-lg-3 col-md-6 col-sm-12">
-                                <article class="">
-                                    <div class="card">
-                                        <img src="https://fakeimg.pl/350x200/?text=World&font=lobster" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h3>Carta</h3>
-                                            <h4>Chardonay</h4>
-                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                <a href="#" class="card-link text-danger"><span class="material-icons">favorite_border</span></a>
-                                                <a href="#" class="card-link text-dark" style="$purple"><span class="material-icons">add_shopping_cart</span></a>
-                                                <a href="#" class="card-link text-dark"><span class="material-icons">add_circle_outline</span></a>
-                                        </div>
+                    <?php include_once('datos/d_productos.php');?>
+
+                    <?php foreach ($productos as $producto) {?>
+                        <?php if ($producto['nombre'] == FALSE) {?>
+                            
+                                    <div class="col-lg-3 col-md-6 col-sm-12">
+                                            <article class="">
+                                                <div class="card">
+                                                    <img src="<?php echo $producto['imagenLG'];?>" alt="...">
+                                                    <div class="card-body">
+                                                        <h3><?php echo $producto['nombre'];?></h3>
+                                                        <h4><?php echo $producto['marca'];?></h4>
+                                                        <p class="card-text"><?php echo $producto['descripcion'];?></p>
+                                                            <a href="#" class="card-link text-danger"><span class="material-icons">favorite_border</span></a>
+                                                            <a href="#" class="card-link text-dark" style="$purple"><span class="material-icons">add_shopping_cart</span></a>
+                                                            <a href="#" class="card-link text-dark"><span class="material-icons">add_circle_outline</span></a>
+                                                    </div>
+                                                </div>
+                                            </article>
                                     </div>
-                                </article>
-                        </div>
+
+                        <?php } ?>
+                    <?php } ?>
                         <div class="col-lg-3 col-md-6 col-sm-12">
                                 <article class="">
                                     <div class="card">
@@ -235,4 +252,4 @@ include_once('include/header.php')?>
    
 
 
-<?php include_once('include/footer.php')?>
+<?php include_once(DIR_BASE.'include/footer.php')?>
