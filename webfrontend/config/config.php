@@ -1,6 +1,7 @@
 <?php
 
-define('DIR_BASE','C:/xampp/htdocs/barrica_wine/webfrontend/');
+define('DIR_BASE','/var/www/html/1Parcial/barrica_wine/webfrontend/');
 
+define('URL','http://localhost/1Parcial/barrica_wine/webfrontend/');
 
 ?>
