@@ -21,7 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
     <!--mi css-->
-    <link rel="stylesheet" href="<?php echo URL ?>css/estilo.css">
+    <link rel="stylesheet" href="css/estilo.css">
     <!--Google Fonts y Icons https://fonts.google.com/icons-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
