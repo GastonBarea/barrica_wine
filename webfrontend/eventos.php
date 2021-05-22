@@ -36,7 +36,7 @@ include_once(DIR_BASE.'include/header.php')?>
     <li>Miércoles 27 de Enero del 2021 18:00Hs</li>
     <li>Viernes 29 de Enero del 2021 20:00</li>
 </ul>
-<p>Anotate mandando en la fecha que deceas <a id="aform" href="contacto.html">aquí.</a></p>
+<p>Anotate mandando en la fecha que deceas <a id="aform" href="contacto.php">aquí.</a></p>
 
 </div>
 

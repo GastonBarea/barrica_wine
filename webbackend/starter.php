@@ -16,9 +16,28 @@
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
-          <div class="col-sm-6">
+          <div class="col-sm-12">
             <h1 class="m-0">Página Principal</h1>
-            
+              <div class="contaner">
+                <div class="row">
+                  <div class="col-lg-3 col-md-6 col-sm-12">
+                  <div style="background: red;"><p>Página Principal</p></div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-12">
+                  <div style="background: red;"><p>Página Principal</p></div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-12">
+                  <div style="background: red;"><p>Página Principal</p></div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-12">
+                  <div style="background: red;"><p>Página Principal</p></div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-12">
+                  <div style="background: red;"><p>Página Principal</p></div>
+                  </div>                                    
+                </div>
+              </div>
+
           </div>
   
         </div><!-- /.row -->

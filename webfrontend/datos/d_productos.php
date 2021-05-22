@@ -24,9 +24,8 @@ $productos = array(
         'descripcion' => 'De una cuidadosa elección',
         'imagenLG' => 'img/luigi-bosca-malbec-doc-2013_2718_lg.jpg',
         'imagenSM' => 'img/luigi-bosca-malbec-doc-2013_2718_th.jpg',
-        'activa' => TRUE,
-        'favoritoLike' => 120,
-        'comentarios' => array('idUsuario' =>'', 'comentario' => ''),
+        'activa' => FALSE,
+
     ),
     '2' => array(
         'id' => 2,
@@ -40,9 +39,9 @@ $productos = array(
         'descripcion' => 'De una cuidadosa elección',
         'imagenLG' => 'img/escorihuela-gascon-malbec_7944_lg.png', 
         'imagenSM' => 'img/escorihuela-gascon-malbec_7944_th.png',
-        'activa' => TRUE,
-        'favoritoLike' => 315,
-        'comentarios' => array('idUsuario' =>'', 'comentario' => ''),
+        'activa' => FALSE,
+ 
+        
     ),
     '3' => array(
         'id' => 3,
@@ -57,8 +56,8 @@ $productos = array(
         'imagenLG' => 'img/luigi-bosca-cabernet-750_7384_lg.jpg',
         'imagenSM' => 'img/luigi-bosca-cabernet-750_7384_th.jpg',
         'activa' => TRUE,
-        'favoritoLike' => 211,
-        'comentarios' => array('idUsuario' =>'', 'comentario' => ''),
+ 
+        
     ),
     '4' => array(
         'id' => 4,
@@ -73,8 +72,8 @@ $productos = array(
         'imagenLG' => 'img/salentein-gran-vu-blend_9390_lg.png',
         'imagenSM' => 'img/salentein-gran-vu-blend_9390_th.png',
         'activa' => TRUE,
-        'favoritoLike' => 123,
-        'comentarios' => array('idUsuario' =>'', 'comentario' => ''),
+
+        
     ),
     '5' => array(
         'id' => 5,
@@ -88,9 +87,9 @@ $productos = array(
         'descripcion' => 'De una cuidadosa elección',
         'imagenLG' => 'img/el-enemigo-bonarda_125_lg.jpg',
         'imagenSM' => 'img/el-enemigo-bonarda_125_th.jpg',
-        'activa' => TRUE,
-        'favoritoLike' => 10,
-        'comentarios' => array('idUsuario' =>'', 'comentario' => ''),
+        'activa' => FALSE,
+
+        
     ),
     '6' => array(
         'id' => 6,
@@ -104,9 +103,9 @@ $productos = array(
         'descripcion' => 'De una cuidadosa elección',
         'imagenLG' => 'img/merlot_438_lg.jpg',
         'imagenSM' => 'img/merlot_438_th.jpg',
-        'activa' => TRUE,
-        'favoritoLike' => 25,
-        'comentarios' => array('idUsuario' =>'', 'comentario' => ''),
+        'activa' => FALSE,
+
+        
     ),
     '7' => array(
         'id' => 7,
@@ -120,9 +119,9 @@ $productos = array(
         'descripcion' => 'De una cuidadosa elección',
         'imagenLG' => 'img/luigi-bosca-chardonnay-750_3638_lg.jpg',
         'imagenSM' => 'img/luigi-bosca-chardonnay-750_3638_th.jpg',
-        'activa' => TRUE,
-        'favoritoLike' => 33,
-        'comentarios' => array('idUsuario' =>'', 'comentario' => ''),
+        'activa' => FALSE,
+
+        
     ),
     '8' => array(
         'id' => 8,
@@ -137,8 +136,8 @@ $productos = array(
         'imagenLG' => 'img/rutini-chardonnay-750_4105_lg.png',
         'imagenSM' => 'img/rutini-chardonnay-750_4105_th.png',
         'activa' => TRUE,
-        'favoritoLike' => 45,
-        'comentarios' => array('idUsuario' =>'', 'comentario' => ''),
+
+        
     ),
     '9' => array(
         'id' => 9,
@@ -153,8 +152,8 @@ $productos = array(
         'imagenLG' => 'img/mendel-semillon-750_3980_lg.jpg',
         'imagenSM' => 'img/mendel-semillon-750_3980_th.jpg',
         'activa' => TRUE,
-        'favoritoLike' => 98,
-        'comentarios' => array('idUsuario' =>'', 'comentario' => ''),
+
+        
     ),
     '10' => array(
         'id' => 10,
@@ -168,9 +167,9 @@ $productos = array(
         'descripcion' => 'De una cuidadosa elección',
         'imagenLG' => 'img/gran-linaje-torrontes-750_2459_lg.jpg',
         'imagenSM' => 'img/gran-linaje-torrontes-750_2459_th.jpg',
-        'activa' => TRUE,
-        'favoritoLike' => 188,
-        'comentarios' => array('idUsuario' =>'', 'comentario' => ''),
+        'activa' => FALSE,
+
+        
     ),
     '11' => array(
         'id' => 11,
@@ -184,9 +183,9 @@ $productos = array(
         'descripcion' => 'De una cuidadosa elección',
         'imagenLG' => 'img/humberto-canale-blush_4610_lg.jpg',
         'imagenSM' => 'img/humberto-canale-blush_4610_th.jpg',
-        'activa' => TRUE,
-        'favoritoLike' => 95,
-        'comentarios' => array('idUsuario' =>'', 'comentario' => ''),
+        'activa' => FALSE,
+
+        
     ),
     '12' => array(
         'id' => 12,
@@ -200,9 +199,9 @@ $productos = array(
         'descripcion' => 'De una cuidadosa elección',
         'imagenLG' => 'img/padrillos-rosado_175_lg.jpg',
         'imagenSM' => 'img/padrillos-rosado_175_th.jpg',
-        'activa' => TRUE,
-        'favoritoLike' => 62,
-        'comentarios' => array('idUsuario' =>'', 'comentario' => '')
+        'activa' => FALSE,
+
+    
     )
 );
 

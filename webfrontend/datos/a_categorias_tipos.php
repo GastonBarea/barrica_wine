@@ -1,7 +1,7 @@
 <?php
 
 $categorias_tipos = array(
-    /*Según el color*/
+
     '1' => array(
         'id' => 1,
         'nombre' => 'Blanco',
@@ -28,7 +28,7 @@ $categorias_tipos = array(
         'descripcion' => 'Es parecido al vino rosado, y se elabora con pieles de uva tinta y mosto de uva blanca.',
         'activa' => TRUE
     ),
-    /*Según el contenido de azúcar*/
+
     '5' => array(
         'id' => 5,
         'nombre' => 'Seco',
@@ -57,7 +57,7 @@ $categorias_tipos = array(
         'activa' => TRUE
     
     ),
-    /*Según el contenido de gas carbónico*/
+
     '9' => array(
         'id' => 9,
         'nombre' => 'Tranquilo',
@@ -72,7 +72,7 @@ $categorias_tipos = array(
         'activa' => TRUE
     
     ),
-    /*Según la crianza en barrica o botella*/
+
     '11' => array(
         'id' => 11,
         'nombre' => 'Vino noble',
@@ -94,7 +94,7 @@ $categorias_tipos = array(
         'activa' => TRUE
     
     ),
-    /*Tintos*/
+
     '14' => array(
         'id' => 14,
         'nombre' => 'Crianza',
@@ -116,7 +116,7 @@ $categorias_tipos = array(
         'activa' => TRUE
     
     ),
-    /*Vinos blancos y rosados*/
+
     '17' => array(
         'id' => 17,
         'nombre' => 'Crianza',
@@ -138,7 +138,7 @@ $categorias_tipos = array(
         'activa' => TRUE
     
     ),
-     /*Según el método de elaboración*/
+
     '20' => array(
         'id' => 20,
         'nombre' => 'Maceración carbónica',
@@ -168,10 +168,6 @@ $categorias_tipos = array(
     
     )
 );
-
-
-
-/*fuente: https://escuelaversailles.com/tipos-de-vino/*/
 
 
 ?>
