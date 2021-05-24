@@ -12,8 +12,8 @@
         <div class="col-4">
             <small>Barrica Wine</small>
             <ul class="nav justify-content-center">
-                <li class=""><a href="#"><span class="material-icons text-dark">facebook</span></a></li>
-                <li class=""><a href="#"><span class="material-icons text-dark">share</span></a></li>
+                <li class=""><a href="https://www.facebook.com/profile.php?id=100068082022060&sk=photos_all"><span class="material-icons text-dark">facebook</span></a></li>
+                <li class=""><a href="whatsapp://send?text=http://localhost/TP%20WEB2/barrica_wine/webfrontend/"><span class="material-icons text-dark">share</span></a></li>
             </ul>
         </div>
         <div class="col-4">
