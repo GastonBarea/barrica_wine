@@ -6,7 +6,7 @@
 <h4>Por uvas:</h4>
 
 <ul class="navbar-nav ml-auto">
-  <li class="nav-item"><a class="nav-link" href="vinos.php?categoria=">Todos</a></li>
+  <li class="nav-item"><a class="nav-link" href="vinos.php?categoria=?>&categorias_tipo=<?php echo (isset($_GET['categorias_tipo']))?$_GET['categorias_tipo']:""; ?>">Todos</a></li>
 <?php 
 
 foreach ($categorias_uvas as $categorias_uva) {?>
@@ -19,14 +19,12 @@ foreach ($categorias_uvas as $categorias_uva) {?>
 <h4>Por tipos:</h4>
 
 <ul class="navbar-nav ml-auto">
-  <li class="nav-item"><a class="nav-link" href="vinos.php?categoria=">Todos</a></li>
+  <li class="nav-item"><a class="nav-link" href="vinos.php?categoria=?>&categorias_uva=<?php echo (isset($_GET['categorias_uva']))?$_GET['categorias_uva']:""; ?>">Todos</a></li>
 <?php foreach ($categorias_tipos as $categorias_tipo) {?>
   <li class="nav-item"><a class="nav-link" href="vinos.php?categorias_tipo=<?php  echo $categorias_tipo['nombre']?>&categorias_uva=<?php echo (isset($_GET['categorias_uva']))?$_GET['categorias_uva']:""; ?>"><?php echo $categorias_tipo['nombre']; ?></a></li>
 <?php } ?>
 </ul>
 
-
-<h4>Por tipos2:</h4>
 <?php 
 
 /*

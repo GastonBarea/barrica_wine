@@ -38,7 +38,7 @@ include_once(DIR_BASE.'include/header.php')
                                     <p class="card-text"><?php echo $producto['descripcion'];?></p>
                                         <a href="#" class="card-link text-danger"><span class="material-icons">favorite_border</span></a>
                                         <a href="#" class="card-link text-dark"><span class="material-icons">add_shopping_cart</span></a>
-                                        <a href="<?php echo $producto['id'].".php";?>" class="card-link text-dark"><span class="material-icons">add_circle_outline</span></a>
+                                        <a href="detalle_producto.php?producto=<?php echo $producto['id'];?>" class="card-link text-dark"><span class="material-icons">add_circle_outline</span></a>
                                 </div>
                             </div>
                         </article>
