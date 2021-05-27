@@ -10,7 +10,7 @@ include_once(DIR_BASE.'include/header.php')?>
     <div class="container conten-center">
  
   
-    <form action="#" method="get">
+    <form action="#" method="POST">
            <input class="form" type="text" name="nombre" placeholder="*Nombre" required>
             <br>
             <input class="form" type="text" name="apellido" placeholder="*Apellido" required>
@@ -20,8 +20,8 @@ include_once(DIR_BASE.'include/header.php')?>
             <textarea class="form formm" name="mensaje" cols="30" rows="8" placeholder="*Dejanos tu consulta:..."></textarea>
             <p class="conten-center cont">*Todos los campos son oblicatoros</p>
 
-            
-            <input class="btn btn-success" type="button" value="Enviar">
+
+            <input class="btn btn-success" type="submit" name="submitCom" value="Enviar">
     </form> 
 
         

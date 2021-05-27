@@ -14,11 +14,6 @@ $producto = $productos[$_GET['producto']];
                             <article class="">
                                 <div class="card m-1">
                                     <img src="<?php echo $producto['imagenLG'];?>" alt="...">
-                                    <div class="card-body">
-                                        <p><?php echo $producto['nombre'];?></p>
-                                        <p><?php echo $producto['marca'];?></p>
-
-                                    </div>
                                 </div>
                             </article>
                     </div>
@@ -75,6 +70,7 @@ $producto = $productos[$_GET['producto']];
                                         <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
                                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                         <button type="submit" class="btn btn-primary m-3">Enviar</button>
+                                        <!--<input class="btn btn-success" type="submit" name="submitCom" value="Enviar">-->
                                         </div>
    
                                     </div>
