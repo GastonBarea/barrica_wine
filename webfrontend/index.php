@@ -1,7 +1,7 @@
 <?php 
 $seccion = 'Home';
 include_once('config/config.php');
-include_once(DIR_BASE.'include/header.php')
+include_once(DIR_BASE.'include/header.php');
 ?>
   
   <section class="inicio">

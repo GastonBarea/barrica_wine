@@ -26,6 +26,7 @@ foreach ($productos as $producto) {
 
 <ul class="navbar-nav ml-auto">
   <li class="nav-item"><a class="nav-link" href="vinos.php?categoria=?>&categorias_uva=<?php echo (isset($_GET['categorias_uva']))?$_GET['categorias_uva']:""; ?>">Todos</a></li>
+
 <?php foreach ($categorias_tipos as $categorias_tipo) {
   if (in_array($categorias_tipo['nombre'],$categoriastipo)) {?>
   <li class="nav-item"><a class="nav-link" href="vinos.php?categorias_tipo=<?php  echo $categorias_tipo['nombre']?>&categorias_uva=<?php echo (isset($_GET['categorias_uva']))?$_GET['categorias_uva']:""; ?>"><?php echo $categorias_tipo['nombre']; ?></a></li>

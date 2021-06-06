@@ -1,10 +1,10 @@
 <?php
-include_once('config/config.php');
-$categorias_tipos_j = file_get_contents(DIR_BASE.'datos/tipos.json');
+include_once('config.php');
+$categorias_tipos_j = file_get_contents(DIR_BASE.'archivos/tipos.json');
 $categorias_tipos = json_decode($categorias_tipos_j,true);
-$categorias_uvas_j = file_get_contents(DIR_BASE.'datos/uvas.json');
+$categorias_uvas_j = file_get_contents(DIR_BASE.'archivos/uvas.json');
 $categorias_uvas = json_decode($categorias_uvas_j,true);
-$data = file_get_contents(DIR_BASE."/datos/c_marcas_bodegas.json");
+$data = file_get_contents(DIR_BASE."/archivos/c_marcas_bodegas.json");
 $marcas = json_decode($data, true);
 
 
@@ -202,5 +202,8 @@ $productos = array(
     
     )
 );
+
+$pasaJson = json_encode($productos);
+var_dump($pasaJson) ;
 
 ?>
