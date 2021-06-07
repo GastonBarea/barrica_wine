@@ -3,15 +3,8 @@ $idproducto = 1;
 include_once('config/config.php');
 include_once(DIR_BASE.'include/header.php');
 include_once(DIR_BASE.'DAO/comentarios.php');
-$productos_j = file_get_contents(DIR_BASE.'datos/productos.json');
-$productos = json_decode($productos_j,true);
-
-?>
-<?php
-$producto = $productos[$_GET['producto']];
+include_once(DIR_BASE.'DAO/productos.php');
 var_dump($_GET);
-
-
 if(isset ($_POST['submitCom'])){
     var_dump($_POST);
 
@@ -23,6 +16,9 @@ if(isset ($_POST['submitCom'])){
 ?>
   <div class="container-fluid">
                 <div class="row">
+                <?php            
+                $producto = obtenerProducto($_GET['producto']);                           
+                ?>
                     <div class="col-lg-4 col-md-4 col-sm-4">
                             <article class="">
                                 <div class="card m-1">

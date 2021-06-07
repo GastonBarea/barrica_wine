@@ -23,15 +23,30 @@ else{
 }
 return $comentarios;
 }
+function obtenerComentario($id){
+    $comentarios = obtenerComentarios();
+    return $comentarios[$id];
+}
+function modificarComentario($datos = array(), $id){
+    $comentarios = obtenerComentarios();
+    $comentarios[$id] = array(
+        'nombre' => $datos['nombre'],
+        'email' => $datos['email'],
+        'mensaje' => $datos['mensaje'],
+        'producto' => $datos['producto'],
+        'fecha' => date('H:i:s d-m-Y')
+    );
+    $fp = fopen(DIR_BASE.'datos/comentarios.json','w');
+    fwrite($fp, json_encode($comentarios));
+    fclose($fp);
+}
+function borrarComentario($id){
+    $comentarios = obtenerComentarios();
+    unset($comentarios[$id]);
+    $fp = fopen(DIR_BASE.'datos/comentarios.json','w');
+    fwrite($fp, json_encode($comentarios));
+    fclose($fp);
+}
 
 
-function obtenerComentario($datos = array()){
-
-}
-function modificarComentario(){
-return  0;
-}
-function borrarComentarios(){
-    return  0;
-}
 ?>
