@@ -28,4 +28,8 @@ include_once(DIR_BASE.'include/header.php')?>
  </div>
 </section>
 
-<?php include_once(DIR_BASE.'include/footer.php')?>
+<?php 
+
+var_dump($_POST);
+
+include_once(DIR_BASE.'include/footer.php')?>
