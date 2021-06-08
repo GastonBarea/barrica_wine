@@ -20,8 +20,8 @@ $productos = array(
         'categotiaUva' => $categorias_uvas[1]['nombre'],//Malbec
         'marca' => $marcas [98]['Bodegas'],//Luigi Bosca
         'descripcion' => 'De una cuidadosa elección',
-        'imagenLG' => 'img/luigi-bosca-malbec-doc-2013_2718_lg.jpg',
-        'imagenSM' => 'img/luigi-bosca-malbec-doc-2013_2718_th.jpg',
+        'imagenLG' => 'luigi-bosca-malbec-doc-2013_2718_lg.jpg',
+        'imagenSM' => 'luigi-bosca-malbec-doc-2013_2718_th.jpg',
         'activa' => FALSE,
 
     ),
@@ -35,8 +35,8 @@ $productos = array(
         'categotiaUva' => $categorias_uvas[1]['nombre'],//Malbec
         'marca' => $marcas [65]['Bodegas'],//Escorihuela Gascon
         'descripcion' => 'De una cuidadosa elección',
-        'imagenLG' => 'img/escorihuela-gascon-malbec_7944_lg.png', 
-        'imagenSM' => 'img/escorihuela-gascon-malbec_7944_th.png',
+        'imagenLG' => 'escorihuela-gascon-malbec_7944_lg.png', 
+        'imagenSM' => 'escorihuela-gascon-malbec_7944_th.png',
         'activa' => FALSE,
  
         
@@ -51,8 +51,8 @@ $productos = array(
         'categotiaUva' => $categorias_uvas[3]['nombre'],//Cabernet Sauvignon
         'marca' => $marcas [98]['Bodegas'],//Luigi Bosca
         'descripcion' => 'De una cuidadosa elección',
-        'imagenLG' => 'img/luigi-bosca-cabernet-750_7384_lg.jpg',
-        'imagenSM' => 'img/luigi-bosca-cabernet-750_7384_th.jpg',
+        'imagenLG' => 'luigi-bosca-cabernet-750_7384_lg.jpg',
+        'imagenSM' => 'luigi-bosca-cabernet-750_7384_th.jpg',
         'activa' => TRUE,
  
         
@@ -67,8 +67,8 @@ $productos = array(
         'categotiaUva' => $categorias_uvas[16]['nombre'],//Blend
         'marca' => $marcas [137]['Bodegas'],//Salentein
         'descripcion' => 'De una cuidadosa elección',
-        'imagenLG' => 'img/salentein-gran-vu-blend_9390_lg.png',
-        'imagenSM' => 'img/salentein-gran-vu-blend_9390_th.png',
+        'imagenLG' => 'salentein-gran-vu-blend_9390_lg.png',
+        'imagenSM' => 'salentein-gran-vu-blend_9390_th.png',
         'activa' => TRUE,
 
         
@@ -83,8 +83,8 @@ $productos = array(
         'categotiaUva' => $categorias_uvas[2]['nombre'],//Bonarda
         'marca' => $marcas [31]['Bodegas'],//Catena Zapata
         'descripcion' => 'De una cuidadosa elección',
-        'imagenLG' => 'img/el-enemigo-bonarda_125_lg.jpg',
-        'imagenSM' => 'img/el-enemigo-bonarda_125_th.jpg',
+        'imagenLG' => 'el-enemigo-bonarda_125_lg.jpg',
+        'imagenSM' => 'el-enemigo-bonarda_125_th.jpg',
         'activa' => FALSE,
 
         
@@ -99,8 +99,8 @@ $productos = array(
         'categotiaUva' => $categorias_uvas[4]['nombre'],//Merlot
         'marca' => $marcas [136]['Bodegas'],//Rutini
         'descripcion' => 'De una cuidadosa elección',
-        'imagenLG' => 'img/merlot_438_lg.jpg',
-        'imagenSM' => 'img/merlot_438_th.jpg',
+        'imagenLG' => 'merlot_438_lg.jpg',
+        'imagenSM' => 'merlot_438_th.jpg',
         'activa' => FALSE,
 
         
@@ -115,8 +115,8 @@ $productos = array(
         'categotiaUva' => $categorias_uvas[11]['nombre'],//Chardonnay
         'marca' => $marcas [98]['Bodegas'],//Luigi Bosca
         'descripcion' => 'De una cuidadosa elección',
-        'imagenLG' => 'img/luigi-bosca-chardonnay-750_3638_lg.jpg',
-        'imagenSM' => 'img/luigi-bosca-chardonnay-750_3638_th.jpg',
+        'imagenLG' => 'luigi-bosca-chardonnay-750_3638_lg.jpg',
+        'imagenSM' => 'luigi-bosca-chardonnay-750_3638_th.jpg',
         'activa' => FALSE,
 
         
@@ -131,8 +131,8 @@ $productos = array(
         'categotiaUva' => $categorias_uvas[11]['nombre'],//Chardonnay
         'marca' => $marcas [136]['Bodegas'],//Rutini
         'descripcion' => 'De una cuidadosa elección',
-        'imagenLG' => 'img/rutini-chardonnay-750_4105_lg.png',
-        'imagenSM' => 'img/rutini-chardonnay-750_4105_th.png',
+        'imagenLG' => 'rutini-chardonnay-750_4105_lg.png',
+        'imagenSM' => 'rutini-chardonnay-750_4105_th.png',
         'activa' => TRUE,
 
         
@@ -147,8 +147,8 @@ $productos = array(
         'categotiaUva' => $categorias_uvas[10]['nombre'],//Semillón
         'marca' => $marcas [105]['Bodegas'],//Mendel
         'descripcion' => 'De una cuidadosa elección',
-        'imagenLG' => 'img/mendel-semillon-750_3980_lg.jpg',
-        'imagenSM' => 'img/mendel-semillon-750_3980_th.jpg',
+        'imagenLG' => 'mendel-semillon-750_3980_lg.jpg',
+        'imagenSM' => 'mendel-semillon-750_3980_th.jpg',
         'activa' => TRUE,
 
         
@@ -163,8 +163,8 @@ $productos = array(
         'categotiaUva' => $categorias_uvas[12]['nombre'],//Torrontés
         'marca' => $marcas [21]['Bodegas'],//Bodegas Etchart
         'descripcion' => 'De una cuidadosa elección',
-        'imagenLG' => 'img/gran-linaje-torrontes-750_2459_lg.jpg',
-        'imagenSM' => 'img/gran-linaje-torrontes-750_2459_th.jpg',
+        'imagenLG' => 'gran-linaje-torrontes-750_2459_lg.jpg',
+        'imagenSM' => 'gran-linaje-torrontes-750_2459_th.jpg',
         'activa' => FALSE,
 
         
@@ -179,8 +179,8 @@ $productos = array(
         'categotiaUva' => $categorias_uvas[1]['nombre'],//Malbec
         'marca' => $marcas [82]['Bodegas'],//Humberto Canale
         'descripcion' => 'De una cuidadosa elección',
-        'imagenLG' => 'img/humberto-canale-blush_4610_lg.jpg',
-        'imagenSM' => 'img/humberto-canale-blush_4610_th.jpg',
+        'imagenLG' => 'humberto-canale-blush_4610_lg.jpg',
+        'imagenSM' => 'humberto-canale-blush_4610_th.jpg',
         'activa' => FALSE,
 
         
@@ -195,8 +195,8 @@ $productos = array(
         'categotiaUva' => $categorias_uvas[1]['nombre'],//Malbec
         'marca' => $marcas [64]['Bodegas'],//Ernesto Cateba
         'descripcion' => 'De una cuidadosa elección',
-        'imagenLG' => 'img/padrillos-rosado_175_lg.jpg',
-        'imagenSM' => 'img/padrillos-rosado_175_th.jpg',
+        'imagenLG' => 'padrillos-rosado_175_lg.jpg',
+        'imagenSM' => 'padrillos-rosado_175_th.jpg',
         'activa' => FALSE,
 
     

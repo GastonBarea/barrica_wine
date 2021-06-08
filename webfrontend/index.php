@@ -31,7 +31,7 @@ include_once(DIR_BASE.'include/header.php');
                 <div class="col-lg-3 col-md-6 col-sm-12">
                         <article class="">
                             <div class="card">
-                                <img src="<?php echo $producto['imagenLG'];?>" alt="...">
+                                <img src="img/<?php echo $producto['imagenLG'];?>" alt="...">
                                 <div class="card-body">
                                     <h3><?php echo $producto['nombre'];?></h3>
                                     <h4><?php echo $producto['marca'];?></h4>

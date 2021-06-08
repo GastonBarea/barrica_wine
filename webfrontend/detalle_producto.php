@@ -22,7 +22,7 @@ if(isset ($_POST['submitCom'])){
                     <div class="col-lg-4 col-md-4 col-sm-4">
                             <article class="">
                                 <div class="card m-1">
-                                    <img src="<?php echo $producto['imagenLG'];?>" alt="...">
+                                    <img src="img/<?php echo $producto['imagenLG'];?>" alt="...">
                                 </div>
                             </article>
                     </div>
