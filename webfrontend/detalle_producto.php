@@ -4,9 +4,9 @@ include_once('config/config.php');
 include_once(DIR_BASE.'include/header.php');
 include_once(DIR_BASE.'DAO/comentarios.php');
 include_once(DIR_BASE.'DAO/productos.php');
-var_dump($_GET);
+//var_dump($_GET);
 if(isset ($_POST['submitCom'])){
-    var_dump($_POST);
+//    var_dump($_POST);
 
     guardarComentarios($_POST);
     
