@@ -22,7 +22,7 @@ if(isset ($_POST['submitCom'])){
                     <div class="col-lg-4 col-md-4 col-sm-4">
                             <article class="">
                                 <div class="card m-1">
-                                    <img src="img/<?php echo $producto['imagenLG'];?>" alt="...">
+                                    <img src="<?php echo 'img/'.$producto['imagenLG'];?>" alt="...">
                                 </div>
                             </article>
                     </div>
@@ -88,22 +88,7 @@ if(isset ($_POST['submitCom'])){
                                         <!--<input class="btn btn-success" type="submit" name="submitCom" value="Enviar">-->
                                         </div>
                                         </form>
-                                            <?php 
-                                            $comentario = obtenerComentarios();
-                                            krsort($comentario);
-                                            
-                                            foreach($comentario as $c){
-                                                if($producto['id'] == $c['producto']){
-
-                                                    echo $c['nombre'].':'.$c['mensaje'].'<br />';                                                   
-                                                }
-
-                                            }
-                                            
-                                            
-                                            
-                                            ?>
-
+              
 
 
                                     </div>
@@ -119,6 +104,22 @@ if(isset ($_POST['submitCom'])){
 
                                     <div class="card-body">
 
+                                                <?php 
+                                                $comentario = obtenerComentarios();
+                                                krsort($comentario);
+                                                
+                                                foreach($comentario as $c){
+                                                    if($producto['id'] == $c['producto']){?>
+                                                    <div class="card m-1">
+                                                    <?php echo $c['nombre'].':'.$c['mensaje'].'<br />';?>
+                                                    </div><?php                                            
+                                                    }
+
+                                                }
+                                                
+                                                
+                                                
+                                                ?>
 
                                     </div>
                                 </div>
