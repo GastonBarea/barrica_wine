@@ -33,9 +33,7 @@ include_once(DIR_BASE.'helpers/string.php');
 						if($producto['categotiaTipo'] != $_GET['categorias_tipo']) $print = FALSE;
 					}
 
-				 	if($print){ 
-            
-			        ?>
+				 	if($print){ ?>
 
 
                 <div class="col-lg-3 col-md-6 col-sm-12">
