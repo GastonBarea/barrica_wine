@@ -17,7 +17,10 @@ include_once(DIR_BASE.'include/header.php');
   </section>
 
 <!--acá va a ir los destacados-->
-<?php include_once('datos/d_productos.php'); ?>
+<?php
+$productos_j = file_get_contents(DIR_BASE.'datos/productos.json');
+$productos = json_decode($productos_j,true); 
+?>
                 
 <section class="vinos">
     <div class="container-fluid">
