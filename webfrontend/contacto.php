@@ -30,6 +30,6 @@ include_once(DIR_BASE.'include/header.php')?>
 
 <?php 
 
-var_dump($_POST);
+//var_dump($_POST);
 
 include_once(DIR_BASE.'include/footer.php')?>

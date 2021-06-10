@@ -1,4 +1,4 @@
-<?php
+<?php/*
 
 $categorias_tipos = array(
 
@@ -170,4 +170,4 @@ $categorias_tipos = array(
 );
 
 
-?>
+*/?>

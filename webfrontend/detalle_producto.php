@@ -4,9 +4,9 @@ include_once('config/config.php');
 include_once(DIR_BASE.'include/header.php');
 include_once(DIR_BASE.'DAO/comentarios.php');
 include_once(DIR_BASE.'DAO/productos.php');
-var_dump($_GET);
+//var_dump($_GET);
 if(isset ($_POST['submitCom'])){
-    var_dump($_POST);
+//    var_dump($_POST);
 
     guardarComentarios($_POST);
     
@@ -22,7 +22,7 @@ if(isset ($_POST['submitCom'])){
                     <div class="col-lg-4 col-md-4 col-sm-4">
                             <article class="">
                                 <div class="card m-1">
-                                    <img src="<?php echo $producto['imagenLG'];?>" alt="...">
+                                    <img src="<?php echo 'img/'.$producto['imagenLG'];?>" alt="...">
                                 </div>
                             </article>
                     </div>
@@ -88,22 +88,7 @@ if(isset ($_POST['submitCom'])){
                                         <!--<input class="btn btn-success" type="submit" name="submitCom" value="Enviar">-->
                                         </div>
                                         </form>
-                                            <?php 
-                                            $comentario = obtenerComentarios();
-                                            krsort($comentario);
-                                            
-                                            foreach($comentario as $c){
-                                                if($producto['id'] == $c['producto']){
-
-                                                    echo $c['nombre'].':'.$c['mensaje'].'<br />';                                                   
-                                                }
-
-                                            }
-                                            
-                                            
-                                            
-                                            ?>
-
+              
 
 
                                     </div>
@@ -119,6 +104,22 @@ if(isset ($_POST['submitCom'])){
 
                                     <div class="card-body">
 
+                                                <?php 
+                                                $comentario = obtenerComentarios();
+                                                krsort($comentario);
+                                                
+                                                foreach($comentario as $c){
+                                                    if($producto['id'] == $c['producto']){?>
+                                                    <div class="card m-1">
+                                                    <?php echo $c['nombre'].':'.$c['mensaje'].'<br />';?>
+                                                    </div><?php                                            
+                                                    }
+
+                                                }
+                                                
+                                                
+                                                
+                                                ?>
 
                                     </div>
                                 </div>

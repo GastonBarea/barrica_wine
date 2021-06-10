@@ -17,7 +17,10 @@ include_once(DIR_BASE.'include/header.php');
   </section>
 
 <!--acá va a ir los destacados-->
-<?php include_once('datos/d_productos.php'); ?>
+<?php
+$productos_j = file_get_contents(DIR_BASE.'datos/productos.json');
+$productos = json_decode($productos_j,true); 
+?>
                 
 <section class="vinos">
     <div class="container-fluid">
@@ -31,7 +34,7 @@ include_once(DIR_BASE.'include/header.php');
                 <div class="col-lg-3 col-md-6 col-sm-12">
                         <article class="">
                             <div class="card">
-                                <img src="<?php echo $producto['imagenLG'];?>" alt="...">
+                                <img src="<?php echo 'img/'.$producto['imagenLG'];?>" alt="...">
                                 <div class="card-body">
                                     <h3><?php echo $producto['nombre'];?></h3>
                                     <h4><?php echo $producto['marca'];?></h4>

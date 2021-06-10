@@ -1,4 +1,4 @@
-<?php
+<?php/*
 include('a_categorias_tipos.php');
 
 $categorias_uvas = array(
@@ -139,4 +139,4 @@ echo $categorias_uvas[1]['tipoVino'];
 echo $categorias_tipos[3]['nombre'];
 */
 
-?>
+*/?>

@@ -44,7 +44,7 @@ include_once(DIR_BASE.'helpers/string.php');
                 <div class="col-lg-3 col-md-6 col-sm-12">
                         <article class="">
                             <div class="card">
-                                <img src="<?php echo $producto['imagenLG'];?>" alt="...">
+                                <img src="<?php echo 'img/'.$producto['imagenLG'];?>" alt="...">
                                 <div class="card-body">
                                     <h3><?php echo cortar_palabras($producto['nombre'],10)?></h3>
                                     <h4><?php echo cortar_palabras($producto['marca'],20)?></h4>
