@@ -1,4 +1,4 @@
-<?php/*
+<?php
 include_once('config/config.php');
 $categorias_tipos_j = file_get_contents(DIR_BASE.'datos/tipos.json');
 $categorias_tipos = json_decode($categorias_tipos_j,true);
@@ -203,4 +203,4 @@ $productos = array(
     )
 );
 
-*/?>
+?>
