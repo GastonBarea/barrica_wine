@@ -5,7 +5,7 @@
         <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Iniciar sesión   <span class="material-icons">account_circle</span>
         </button>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="#" class="dropdown-item">
+          <a href="admin" class="dropdown-item">
             <!-- Inicio del mensaje -->
             <div class="media">
               <div class="media-body">

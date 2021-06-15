@@ -2,13 +2,14 @@
 $idproducto = 1;
 include_once('config/config.php');
 include_once(DIR_BASE.'include/header.php');
-include_once(DIR_BASE.'DAO/comentarios.php');
-include_once(DIR_BASE.'DAO/productos.php');
+include_once(DIR_BASE.'business/comentariosBusiness.php');
+include_once(DIR_BASE.'business/productosBusiness.php');
+
 //var_dump($_GET);
-if(isset ($_POST['submitCom'])){
+if(isset ($_POST['form1'])){
 //    var_dump($_POST);
 
-    guardarComentarios($_POST);
+    businessGuardarComentarios($_POST);
     
 
 }
@@ -17,7 +18,7 @@ if(isset ($_POST['submitCom'])){
   <div class="container-fluid">
                 <div class="row">
                 <?php            
-                $producto = obtenerProducto($_GET['producto']);                           
+                $producto = businessObtenerproducto($_GET['producto']);                           
                 ?>
                     <div class="col-lg-4 col-md-4 col-sm-4">
                             <article class="">
@@ -83,7 +84,7 @@ if(isset ($_POST['submitCom'])){
                                             <div class="mb-3">
                                             <label for="exampleFormControlTextarea1" class="form-label" ></label>
                                             <textarea class="form" name="mensaje" cols="30" rows="8" placeholder="*Dejanos tu consulta:..."></textarea>
-                                            <input type="submit" name= "submitCom"class="btn btn-primary m-3">
+                                            <input type="submit" name= "form1"class="btn btn-primary m-3">
                                             <input type="hidden" name="producto" value="<?php echo $producto['id']?>">
                                         <!--<input class="btn btn-success" type="submit" name="submitCom" value="Enviar">-->
                                         </div>
@@ -105,7 +106,7 @@ if(isset ($_POST['submitCom'])){
                                     <div class="card-body">
 
                                                 <?php 
-                                                $comentario = obtenerComentarios();
+                                                $comentario = businessObtenerComentarios();
                                                 krsort($comentario);
                                                 
                                                 foreach($comentario as $c){
