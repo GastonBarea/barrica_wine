@@ -57,8 +57,7 @@ if(isset ($_POST['form1'])){
                                         <p class="card-text"><?php echo $producto['cosecha'];?></p>
                                         <p class="card-text"><?php echo $producto['categotiaTipo'];?></p>
                                         <p class="card-text"><?php echo $producto['descripcion'];?></p>
-                                        <p>Comentarios de nuestros clientes</p>
-                                        <p class="card-text"><?php //foreach ($comentarios as $comentario) {echo $productos[1]['comentarios'];?></p>
+
 
                                     </div>
                                 </div>
@@ -83,7 +82,7 @@ if(isset ($_POST['form1'])){
                                             </div>
                                             <div class="mb-3">
                                             <label for="exampleFormControlTextarea1" class="form-label" ></label>
-                                            <textarea class="form" name="mensaje" cols="30" rows="8" placeholder="*Dejanos tu consulta:..."></textarea>
+                                            <textarea class="form" name="mensaje" cols="30" rows="8" placeholder="*Comenta este producto:..."></textarea>
                                             <input type="submit" name= "form1"class="btn btn-primary m-3">
                                             <input type="hidden" name="producto" value="<?php echo $producto['id']?>">
                                         <!--<input class="btn btn-success" type="submit" name="submitCom" value="Enviar">-->

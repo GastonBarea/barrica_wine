@@ -1,5 +1,2 @@
-<<<<<<< HEAD
 {"20210610033455000000":{"nombre":"Sebastian ","email":"dada@mail","mensaje":"aaa","producto":"3","fecha":"03:34:55 10-06-2021"},"20210610033501000000":{"nombre":"dadadadada","email":"dada@mail","mensaje":"dadada","producto":"3","fecha":"03:35:01 10-06-2021"},"20210613115559000000":{"nombre":"dadadadada","email":"dada@mail","mensaje":"da","producto":"<br \/>\r\n<b>Notice<\/b>:  Undefined index: id in <b>C:\\xampp\\htdocs\\barrica_wineEdit\\webfrontend\\detalle_producto.php<\/b> on line <b>88<\/b><br \/>\r\n","fecha":"23:55:59 13-06-2021"},"20210614122830000000":{"nombre":"Sebastian ","email":"sebastian.martinp6@gmail.com","mensaje":"hola","producto":"1","fecha":"00:28:30 14-06-2021"},"20210614122851000000":{"nombre":"dadadadada","email":"sebastian.martinp6@gmail.com","mensaje":"cuak","producto":"1","fecha":"00:28:51 14-06-2021"}}
-=======
-{"20210615012623000000":{"nombre":"","email":"","mensaje":"","producto":"8","fecha":"01:26:23 15-06-2021"},"20210615012630000000":{"nombre":"","email":"","mensaje":"hoas","producto":"8","fecha":"01:26:30 15-06-2021"},"20210615012641000000":{"nombre":"","email":"","mensaje":"hoas","producto":"8","fecha":"01:26:41 15-06-2021"}}
->>>>>>> 9c8eeaa09ea3b3762e5520658d0518b785b50b00
+
