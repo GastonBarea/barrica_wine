@@ -2,13 +2,13 @@
 $seccion = 'NuestrosVinos';
 include_once('config/config.php');
 include_once(DIR_BASE.'include/header.php');
+include_once(DIR_BASE.'helpers/string.php');
 $uvas_j = file_get_contents(DIR_BASE.'datos/uvas.json');
 $categorias_uvas = json_decode($uvas_j,true);
 $tipos_j = file_get_contents(DIR_BASE.'datos/tipos.json');
 $categorias_tipos = json_decode($tipos_j,true);
 $productos_j = file_get_contents(DIR_BASE.'datos/productos.json');
 $productos = json_decode($productos_j,true);
-include_once(DIR_BASE.'helpers/string.php');
 
 ?>
 
