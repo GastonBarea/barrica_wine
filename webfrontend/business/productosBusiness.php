@@ -15,6 +15,4 @@ daoModificarProducto($datos, $id);
 function businessBorrarProducto($id){
 daoBorrarProducto($id);
 }
-
-
 ?>

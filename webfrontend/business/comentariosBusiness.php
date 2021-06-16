@@ -15,6 +15,4 @@ daoModificarComentario($datos, $id);
 function businessBorrarComentario($id){
 daoBorrarComentario($id);
 }
-
-
 ?>
