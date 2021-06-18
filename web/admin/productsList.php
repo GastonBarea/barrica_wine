@@ -79,7 +79,7 @@ if(isset($_GET['del'])){
                       <th>Descripción</th>
                       <th>ImagenLG</th>
                       <th>ImagenSM</th>
-                      <th>Activo Index</th>
+                      <th>Activo</th>
                       <th>Acciones</th>
                     </tr>
                   </thead>
