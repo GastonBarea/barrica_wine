@@ -1,5 +1,8 @@
 
-<?php include_once('config/config.php'); ?>
+<?php 
+include_once('config/config.php');
+include_once(DIR_BASE.'helpers/urls.php');
+?>
 
 <!DOCTYPE html>
 <html lang="es">

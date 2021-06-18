@@ -42,10 +42,13 @@ function daoModificarProducto($datos = array(), $id){
 }
 function daoBorrarProducto($id){
     $productos = daoObtenerProductos();
-    unset($productos[$id]);
-    $fp = fopen(DIR_BASE.'datos/productos.json','w');
+    if (isset($productos[$id])) {
+        unset($productos[$id]);
+    }
+    /*$fp = fopen(DIR_BASE.'datos/productos.json','w');
     fwrite($fp, json_encode($productos));
-    fclose($fp);
+    fclose($fp);*/
+    file_put_contents(DIR_BASE.'datos/productos.json',json_encode($productos));
 }
 
 
