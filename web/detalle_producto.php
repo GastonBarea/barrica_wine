@@ -3,7 +3,7 @@ $idproducto = 1;
 include_once('config/config.php');
 include_once(DIR_BASE.'include/header.php');
 include_once(DIR_BASE.'business/comentariosBusiness.php');
-include_once(DIR_BASE.'business/productosBusiness.php');
+include_once(DIR_BASE.'business/productsBusiness.php');
 
 //var_dump($_GET);
 if(isset ($_POST['form1'])){

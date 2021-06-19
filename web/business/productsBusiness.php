@@ -10,7 +10,7 @@ function businessObtenerProducto($id){
     return daoObtenerProducto($id);
 }
 function businessModificarProducto($datos = array(), $id){
-daoModificarProducto($datos, $id);
+  daoModificarProducto($datos, $id);
 }
 function businessBorrarProducto($id){
 daoBorrarProducto($id);

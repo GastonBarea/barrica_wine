@@ -100,7 +100,7 @@ if(isset($_GET['del'])){
                       <td><?php echo $prod ['imagenSM']?></td>
                       <td><?php echo $prod ['activa']?'SI':'NO'?></td>
                       <td>
-                      <a href="productsList.php?edit=<?php echo $prod ['id']?>"><span class="material-icons">edit</span></a>
+                      <a href="productsNew.php?edit=<?php echo $prod ['id']?>"><span class="material-icons">edit</span></a>
                       <a href="productsList.php?del=<?php echo $prod ['id']?>"><span class="material-icons">delete</span></a>
                       </td>
                     </tr>

@@ -4,6 +4,34 @@ include_once(DIR_BASE.'business/productsBusiness.php');
 include_once(DIR_BASE.'business/trademarkBusiness.php');
 include_once(DIR_BASE.'business/categoryTipoBusiness.php');
 include_once(DIR_BASE.'business/categoryUvaBusiness.php');
+
+if (isset($_POST['submit'])) {
+  if (!empty($_GET['edit'])) {
+    businessModificarProducto($_POST,$_GET['edit']);
+  }else {
+    businessGuardarProductos($_POST);
+  }
+  redirect('productsList.php');
+}
+
+$producto = array(
+  'nombre' => '',
+  'precio' => '',
+  'contenido' => '',
+  'cosecha' => '',
+  'categotiaTipo' => '',
+  'categotiaUva' => '',
+  'marca' => '',
+  'descripcion' => '',
+  'imagenLG' => '',
+  'imagenSM' => '',
+  'activa' => isset($datos['activa'])?'false':'true',
+);
+
+if (!empty($_GET['edit'])) {
+  $producto = businessObtenerProducto($_GET['edit']);
+}
+
 ?>
 
   <div class="wrapper">
@@ -32,60 +60,66 @@ include_once(DIR_BASE.'business/categoryUvaBusiness.php');
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->
-                            <form>
+                            <form action="" method="post" >
                               <div class="card-body">
                                 <div class="form-group">
-                                  <label for="exampleInputEmail1">Nombre</label>
-                                  <input type="text" class="form-control" id="exampleInputEmail1" name="nombre" placeholder="Nombre...">
+                                  <label>Nombre</label>
+                                  <input type="text" class="form-control" name="nombre" value="<?php echo $producto['nombre'] ?>" placeholder="Nombre...">
                                 </div>
                                 <div class="form-group">
-                                  <label for="exampleInputEmail1">Precio</label>
-                                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Precio...">
+                                  <label>Precio</label>
+                                  <input type="text" class="form-control" name="precio" value="<?php echo $producto['precio'] ?>" placeholder="Precio...">
                                 </div>
                                 <div class="form-group">
-                                  <label for="exampleInputEmail1">Contenido</label>
-                                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Contenido...">
+                                  <label>Contenido</label>
+                                  <input type="text" class="form-control" name="contenido" value="<?php echo $producto['contenido'] ?>" placeholder="Contenido...">
                                 </div>
                                 <div class="form-group">
-                                  <label for="exampleInputEmail1">Cosecha</label>
-                                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Cosecha...">
+                                  <label>Cosecha</label>
+                                  <input type="text" class="form-control" name="cosecha" value="<?php echo $producto['cosecha'] ?>" placeholder="Cosecha...">
                                 </div>
                                 <div class="form-group m-5">
-                                  <label for="exampleInputPassword1">Categoría_Tipo: </label>
-                                  <select name="Categoría_Tipo">
-                                    <option value="">Categoría_Tipo</option>
+                                  <label>Categoría Tipo: </label>
+                                  <select name="categotiaTipo">
+                                    <?php foreach (daoObtenerCategoriasTipo() as $catTipo) {?>
+                                    <option value="<?php echo $catTipo['id'] ?>" <?php echo ($catTipo['id'] == $producto['categotiaTipo'])?'selected':'' ?>><?php echo $catTipo['nombre'] ?></option>
+                                    <?php } ?>
                                   </select>
                                 </div>
                                 <div class="form-group m-5">
-                                  <label for="exampleInputPassword1">Categoría Uva: </label>
-                                  <select name="Categoría_Uva">
-                                    <option value="">Categoría_Uva</option>
+                                  <label>Categoría Uva: </label>
+                                  <select name="categotiaUva">
+                                    <?php foreach (daoObtenerCategoriasUva() as $catUva) {?>
+                                    <option value="<?php echo $catUva['id'] ?>" <?php echo ($catUva['id'] == $producto['categotiaUva'])?'selected':'' ?>><?php echo $catUva['nombre'] ?></option>
+                                    <?php } ?>
                                   </select>
                                 </div>
                                 <div class="form-group m-5">
-                                  <label for="exampleInputPassword1">Marca: </label>
-                                  <select name="Marca">
-                                    <option value="">Marca</option>
+                                  <label>Marcas: </label>
+                                  <select name="marca">
+                                    <?php foreach (daoObtenerMarcas() as $marca) {?>
+                                    <option value="<?php echo $marca['id'] ?>" <?php echo ($marca['id'] == $producto['marca'])?'selected':'' ?>><?php echo $marca['Bodegas'] ?></option>
+                                    <?php } ?>
                                   </select>
                                 </div>
                                 <div class="form-group">
-                                  <label for="exampleInputPassword1">Descripción</label>
-                                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Descripción...">
+                                  <label>Descripción</label>
+                                  <textarea type="text" class="form-control" name="descripcion" placeholder="Descripción..." ><?php echo $producto['descripcion'] ?></textarea>
                                 </div>
                                 <div class="form-group">
                                   <label for="exampleInputPassword1">ImagenLG</label>
-                                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="ImagenLG...">
+                                  <input type="text" class="form-control" name="imagenLG" value="<?php echo $producto['imagenLG'] ?>" placeholder="ImagenLG...">
                                 </div>
                                 <div class="form-group">
-                                  <label for="exampleInputPassword1">ImagenSM</label>
-                                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="ImagenSM...">
+                                  <label>ImagenSM</label>
+                                  <input type="text" class="form-control" name="imagenSM" value="<?php echo $producto['imagenSM'] ?>" placeholder="ImagenSM...">
                                 </div>
                                 <div class="form-group">
-                                  <label for="exampleInputFile">Activo Index</label>
+                                  <label for="exampleInputFile">Subir Imagen</label>
                                   <div class="input-group">
                                     <div class="custom-file">
-                                      <input type="file" class="custom-file-input" id="exampleInputFile">
-                                      <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                      <input type="file" class="custom-file-input" id="">
+                                      <label class="custom-file-label">Choose file</label>
                                     </div>
                                     <div class="input-group-append">
                                       <span class="input-group-text">Upload</span>
@@ -93,14 +127,14 @@ include_once(DIR_BASE.'business/categoryUvaBusiness.php');
                                   </div>
                                 </div>
                                 <div class="form-check">
-                                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                  <label class="form-check-label" for="exampleCheck1">Activo</label>
+                                  <input type="checkbox" class="form-check-input" value="true" name="activa" <?php echo ($producto['activa']==true)?'cheked':'' ?>>
+                                  <label class="form-check-label" >Activo</label>
                                 </div>
                                       </div>
                           <!-- /.card-body -->
 
                           <div class="card-footer">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
                           </div>
                         </form>
                       </div>
