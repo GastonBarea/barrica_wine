@@ -81,7 +81,7 @@ if (!empty($_GET['edit'])) {
                                 <div class="form-group m-5">
                                   <label>Categoría Tipo: </label>
                                   <select name="categotiaTipo">
-                                    <?php foreach (daoObtenerCategoriasTipo() as $catTipo) {?>
+                                    <?php foreach (businessObtenerTipos() as $catTipo) {?>
                                     <option value="<?php echo $catTipo['id'] ?>" <?php echo ($catTipo['id'] == $producto['categotiaTipo'])?'selected':'' ?>><?php echo $catTipo['nombre'] ?></option>
                                     <?php } ?>
                                   </select>
@@ -89,7 +89,7 @@ if (!empty($_GET['edit'])) {
                                 <div class="form-group m-5">
                                   <label>Categoría Uva: </label>
                                   <select name="categotiaUva">
-                                    <?php foreach (daoObtenerCategoriasUva() as $catUva) {?>
+                                    <?php foreach (businessObtenerUvas() as $catUva) {?>
                                     <option value="<?php echo $catUva['id'] ?>" <?php echo ($catUva['id'] == $producto['categotiaUva'])?'selected':'' ?>><?php echo $catUva['nombre'] ?></option>
                                     <?php } ?>
                                   </select>
@@ -97,7 +97,7 @@ if (!empty($_GET['edit'])) {
                                 <div class="form-group m-5">
                                   <label>Marcas: </label>
                                   <select name="marca">
-                                    <?php foreach (daoObtenerMarcas() as $marca) {?>
+                                    <?php foreach (businessObtenerMarcas() as $marca) {?>
                                     <option value="<?php echo $marca['id'] ?>" <?php echo ($marca['id'] == $producto['marca'])?'selected':'' ?>><?php echo $marca['Bodegas'] ?></option>
                                     <?php } ?>
                                   </select>

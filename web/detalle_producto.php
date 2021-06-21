@@ -5,6 +5,13 @@ include_once(DIR_BASE.'include/header.php');
 include_once(DIR_BASE.'business/comentariosBusiness.php');
 include_once(DIR_BASE.'business/productsBusiness.php');
 
+$uvas_j = file_get_contents(DIR_BASE.'datos/uvas.json');
+$categorias_uvas = json_decode($uvas_j,true);
+$tipos_j = file_get_contents(DIR_BASE.'datos/tipos.json');
+$categorias_tipos = json_decode($tipos_j,true);
+$marcas_j = file_get_contents(DIR_BASE.'datos/c_marcas_bodegas.json');
+$marcas = json_decode($marcas_j,true);
+
 //var_dump($_GET);
 if(isset ($_POST['form1'])){
 //    var_dump($_POST);
@@ -18,7 +25,7 @@ if(isset ($_POST['form1'])){
   <div class="container-fluid">
                 <div class="row">
                 <?php            
-                $producto = businessObtenerproducto($_GET['producto']);                           
+                $producto = businessObtenerproducto($_GET['producto']);                         
                 ?>
                     <div class="col-lg-4 col-md-4 col-sm-4">
                             <article class="">
@@ -33,7 +40,7 @@ if(isset ($_POST['form1'])){
 
                                     <div class="card-body">
                                         <h3><?php echo $producto['nombre'];?></h3>
-                                        <h4><?php echo $producto['marca'];?></h4>
+                                        <h4><?php echo $marcas[$producto['categotiaTipo']]['Bodegas'];?></h4>
                                         <p class="card-text"><?php echo "$ ".$producto['precio'];?></p>
                                         <p class="card-text"><?php echo $producto['contenido'];?></p>
                                             <a href="#" class="card-link text-danger"><span class="material-icons">favorite_border</span></a>
@@ -55,7 +62,8 @@ if(isset ($_POST['form1'])){
                                         <p class="card-text"><?php echo $producto['precio'];?></p>
                                         <p class="card-text"><?php echo $producto['contenido'];?></p>
                                         <p class="card-text"><?php echo $producto['cosecha'];?></p>
-                                        <p class="card-text"><?php echo $producto['categotiaTipo'];?></p>
+                                        <p class="card-text"><?php echo $categorias_uvas[$producto['categotiaTipo']]['nombre'];?></p>
+                                        <p class="card-text"><?php echo $categorias_tipos[$producto['categotiaTipo']]['nombre'];?></p>
                                         <p class="card-text"><?php echo $producto['descripcion'];?></p>
 
 

@@ -19,7 +19,9 @@ include_once(DIR_BASE.'include/header.php');
 <!--acá va a ir los destacados-->
 <?php
 $productos_j = file_get_contents(DIR_BASE.'datos/productos.json');
-$productos = json_decode($productos_j,true); 
+$productos = json_decode($productos_j,true);
+$marcas_j = file_get_contents(DIR_BASE.'datos/c_marcas_bodegas.json');
+$marcas = json_decode($marcas_j,true);
 ?>
                 
 <section class="vinos">
@@ -37,7 +39,7 @@ $productos = json_decode($productos_j,true);
                                 <img src="<?php echo 'img/'.$producto['imagenLG'];?>" alt="...">
                                 <div class="card-body">
                                     <h3><?php echo $producto['nombre'];?></h3>
-                                    <h4><?php echo $producto['marca'];?></h4>
+                                    <h4><?php echo $marcas[$producto['categotiaTipo']]['Bodegas'];?></h4>
                                     <p class="card-text"><?php echo $producto['descripcion'];?></p>
                                         <a href="#" class="card-link text-danger"><span class="material-icons">favorite_border</span></a>
                                         <a href="#" class="card-link text-dark"><span class="material-icons">add_shopping_cart</span></a>

@@ -1,8 +1,15 @@
 <?php
 include_once('include/head.php');
 include_once('include/topbar.php'); 
-include_once('include/lateralbar.php'); 
+include_once('include/lateralbar.php');
 include_once(DIR_BASE.'business/productsBusiness.php');
+include_once(DIR_BASE.'business/trademarkBusiness.php');
+include_once(DIR_BASE.'business/categoryTipoBusiness.php');
+include_once(DIR_BASE.'business/categoryUvaBusiness.php');
+
+$catTipo = businessObtenerTipos();
+$catUva = businessObtenerUvas();
+$marca = businessObtenerMarcas();
 
 if(isset($_GET['del'])){
   businessBorrarProducto($_GET['del']);
@@ -92,9 +99,9 @@ if(isset($_GET['del'])){
                       <td><?php echo "$ ". $prod ['precio']?></td>
                       <td><?php echo $prod ['contenido']?></td>
                       <td><?php echo $prod ['cosecha']?></td>
-                      <td><?php echo $prod ['categotiaTipo']?></td>
-                      <td><?php echo $prod ['categotiaUva']?></td>
-                      <td><?php echo $prod ['marca']?></td>
+                      <td><?php echo $catTipo[$prod ['categotiaTipo']]['nombre']?></td>
+                      <td><?php echo $catUva[$prod ['categotiaUva']]['nombre']?></td>
+                      <td><?php echo $marca[$prod ['marca']]['Bodegas']?></td>
                       <td><?php echo $prod ['descripcion']?></td>
                       <td><?php echo $prod ['imagenLG']?></td>
                       <td><?php echo $prod ['imagenSM']?></td>

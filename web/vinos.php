@@ -9,6 +9,8 @@ $tipos_j = file_get_contents(DIR_BASE.'datos/tipos.json');
 $categorias_tipos = json_decode($tipos_j,true);
 $productos_j = file_get_contents(DIR_BASE.'datos/productos.json');
 $productos = json_decode($productos_j,true);
+$marcas_j = file_get_contents(DIR_BASE.'datos/c_marcas_bodegas.json');
+$marcas = json_decode($marcas_j,true);
 
 ?>
 
@@ -47,7 +49,7 @@ $productos = json_decode($productos_j,true);
                                 <img src="<?php echo 'img/'.$producto['imagenLG'];?>" alt="...">
                                 <div class="card-body">
                                     <h3><?php echo cortar_palabras($producto['nombre'],10)?></h3>
-                                    <h4><?php echo cortar_palabras($producto['marca'],20)?></h4>
+                                    <h4><?php echo cortar_palabras($marcas[$producto['categotiaTipo']]['Bodegas'],20)?></h4>
                                     <p class="card-text"><?php echo cortar_palabras($producto['descripcion'],30)?></p>
                                         <a href="#" class="card-link text-danger"><span class="material-icons">favorite_border</span></a>
                                         <a href="#" class="card-link text-dark"><span class="material-icons">add_shopping_cart</span></a>
