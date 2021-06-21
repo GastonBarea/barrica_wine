@@ -38,7 +38,6 @@ function daoObtenerProducto($id){
 
 function daoModificarProducto($datos = array(), $id){
         $productos = daoObtenerProductos();
-    $id = date('Ymdhisu');
     $productos[$id] = array(
         'id' => $id,
         'nombre' => $datos['nombre'],
