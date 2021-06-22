@@ -36,7 +36,7 @@ $marcas = json_decode($marcas_j,true);
                 <div class="col-lg-3 col-md-6 col-sm-12">
                         <article class="">
                             <div class="card">
-                                <img src="<?php echo 'img/'.$producto['imagenLG'];?>" alt="...">
+                                <img src="img/<?php echo $producto['id'];?>/img_0_big.jpg" alt="...">
                                 <div class="card-body">
                                     <h3><?php echo $producto['nombre'];?></h3>
                                     <h4><?php echo $marcas[$producto['categotiaTipo']]['Bodegas'];?></h4>

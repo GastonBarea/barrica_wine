@@ -84,8 +84,6 @@ if(isset($_GET['del'])){
                       <th>Categoría Uva</th>
                       <th>Marca</th>
                       <th>Descripción</th>
-                      <th>ImagenLG</th>
-                      <th>ImagenSM</th>
                       <th>Activo</th>
                       <th>Acciones</th>
                     </tr>
@@ -103,8 +101,6 @@ if(isset($_GET['del'])){
                       <td><?php echo $catUva[$prod ['categotiaUva']]['nombre']?></td>
                       <td><?php echo $marca[$prod ['marca']]['Bodegas']?></td>
                       <td><?php echo $prod ['descripcion']?></td>
-                      <td><?php echo $prod ['imagenLG']?></td>
-                      <td><?php echo $prod ['imagenSM']?></td>
                       <td><?php echo $prod ['activa']?'SI':'NO'?></td>
                       <td>
                       <a href="productsNew.php?edit=<?php echo $prod ['id']?>"><span class="material-icons">edit</span></a>

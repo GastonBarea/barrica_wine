@@ -30,7 +30,7 @@ if(isset ($_POST['form1'])){
                     <div class="col-lg-4 col-md-4 col-sm-4">
                             <article class="">
                                 <div class="card m-1">
-                                    <img src="<?php echo 'img/'.$producto['imagenLG'];?>" alt="...">
+                                    <img src="img/<?php echo $producto['id'];?>/img_0_big.jpg" alt="...">
                                 </div>
                             </article>
                     </div>

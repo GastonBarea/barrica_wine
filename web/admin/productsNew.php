@@ -60,7 +60,7 @@ if (!empty($_GET['edit'])) {
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->
-                            <form action="" method="post" >
+                            <form action="" method="post" enctype="multipart/form-data">
                               <div class="card-body">
                                 <div class="form-group">
                                   <label>Nombre</label>
@@ -107,22 +107,11 @@ if (!empty($_GET['edit'])) {
                                   <textarea type="text" class="form-control" name="descripcion" placeholder="Descripción..." ><?php echo $producto['descripcion'] ?></textarea>
                                 </div>
                                 <div class="form-group">
-                                  <label for="exampleInputPassword1">ImagenLG</label>
-                                  <input type="text" class="form-control" name="imagenLG" value="<?php echo $producto['imagenLG'] ?>" placeholder="ImagenLG...">
-                                </div>
-                                <div class="form-group">
-                                  <label>ImagenSM</label>
-                                  <input type="text" class="form-control" name="imagenSM" value="<?php echo $producto['imagenSM'] ?>" placeholder="ImagenSM...">
-                                </div>
-                                <div class="form-group">
-                                  <label for="exampleInputFile">Subir Imagen</label>
+                                  <label for="exampleInputFile">Subir Imagen...</label>
                                   <div class="input-group">
                                     <div class="custom-file">
-                                      <input type="file" class="custom-file-input" id="">
-                                      <label class="custom-file-label">Choose file</label>
-                                    </div>
-                                    <div class="input-group-append">
-                                      <span class="input-group-text">Upload</span>
+                                      <input type="file" name="imagen" class="custom-file-input" id=""><!--PARA CARGAR LA IMAGEN-->
+                                      <label class="custom-file-label"></label>
                                     </div>
                                   </div>
                                 </div>
