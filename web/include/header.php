@@ -2,6 +2,8 @@
 <?php 
 include_once('config/config.php');
 include_once(DIR_BASE.'helpers/urls.php');
+include_once(DIR_BASE.'helpers/image.php');
+include_once(DIR_BASE.'business/productsBusiness.php');
 ?>
 
 <!DOCTYPE html>

@@ -110,7 +110,7 @@ if (!empty($_GET['edit'])) {
                                   <label for="exampleInputFile">Subir Imagen...</label>
                                   <div class="input-group">
                                     <div class="custom-file">
-                                      <input type="file" name="imagen" class="custom-file-input" id=""><!--PARA CARGAR LA IMAGEN-->
+                                      <input type="file" name="imagen[]" multiple class="custom-file-input" id=""><!--PARA CARGAR LA IMAGEN-->
                                       <label class="custom-file-label"></label>
                                     </div>
                                   </div>
