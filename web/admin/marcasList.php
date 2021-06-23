@@ -87,7 +87,7 @@ if(isset($_GET['del'])){
                     <tr>
                       <td><?php echo $prod ['id']?></td>
                       <td><?php echo $prod ['Bodegas']?></td>
-                      <td><?php echo $prod ['Activa']?'SI':'NO'?></td>
+                      <td><?php echo $prod ['activa']?'SI':'NO'?></td>
                       <td>
                       <a href="marcasNew.php?edit=<?php echo $prod ['id']?>"><span class="material-icons">edit</span></a>
                       <a href="marcasList.php?del=<?php echo $prod ['id']?>"><span class="material-icons">delete</span></a>

@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
 $producto = array(
   'id' => '',
   'Bodegas' => '',
-  'Activa' => isset($datos['Activa'])?'false':'true',
+  'activa' => isset($datos['activa'])?'false':'true',
 );
 
 if (!empty($_GET['edit'])) {
@@ -60,7 +60,7 @@ if (!empty($_GET['edit'])) {
                                   <textarea type="text" class="form-control" name="Bodegas" placeholder="Bodega..." ><?php echo $producto['Bodegas'] ?></textarea>
                                 </div>                            
                                 <div class="form-check">
-                                  <input type="checkbox" class="form-check-input" value="true" name="Activa" <?php echo ($producto['Activa']==true)?'cheked':'' ?>>
+                                  <input type="checkbox" class="form-check-input" value="true" name="Activa" <?php echo ($producto['activa']==true)?'cheked':'' ?>>
                                   <label class="form-check-label" >Activo</label>
                                 </div>
                                       </div>

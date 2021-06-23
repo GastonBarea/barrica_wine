@@ -6,7 +6,7 @@ function daoGuardarMarcas($datos = array()){
     $productos[$id] = array(
         'id' => $id,
         'Bodegas' => $datos['Bodegas'],
-        'Activa' => isset($datos['Activa'])?true:false,
+        'activa' => isset($datos['activa'])?true:false,
     );
     file_put_contents(DIR_BASE.'datos/marcas.json',json_encode($productos));
 
