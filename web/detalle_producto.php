@@ -38,7 +38,7 @@ if(isset ($_POST['form1'])){
                                             $active = 'active';
                                             foreach($imagenes as $img){ ?>
                                         <div class="carousel-item <?php echo $active; $active=''; ?>">
-                                            <img src="<?php echo str_replace('small','big',$imagenes[0]);?>" class="d-block w-100" alt="..."><!--imagen original-->
+                                            <img src="<?php echo str_replace('small','big',$img);?>" class="d-block w-100" alt="..."><!--imagen original-->
                                         </div>
                                         <?php } } else{ ?>
                                         <div class="carousel-item active">
