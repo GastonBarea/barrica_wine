@@ -63,4 +63,14 @@ function businessObtenerImagenesProducto($id){
 function businessBorrarProducto($id){
 daoBorrarProducto($id);
 }
+
+
+function businesseliminar_archivos($id){
+  $dir = DIR_BASE.'img/'.$id.'/';
+ return eliminar_archivos($dir);
+
+}
+
+
+
 ?>

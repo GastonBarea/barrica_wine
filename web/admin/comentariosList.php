@@ -1,5 +1,5 @@
 <?php
-$seccion = 'productsList';
+$seccion = 'comentariosList';
 include_once('include/head.php');
 include_once('include/topbar.php'); 
 include_once('include/lateralbar.php');
@@ -7,16 +7,15 @@ include_once(DIR_BASE.'business/productsBusiness.php');
 include_once(DIR_BASE.'business/trademarkBusiness.php');
 include_once(DIR_BASE.'business/categoryTipoBusiness.php');
 include_once(DIR_BASE.'business/categoryUvaBusiness.php');
+include_once(DIR_BASE.'business/comentariosBusiness.php');
 
 $catTipo = businessObtenerTipos();
 $catUva = businessObtenerUvas();
 $marca = businessObtenerMarcas();
 
 if(isset($_GET['del'])){
-  businessBorrarProducto($_GET['del']);
-  businesseliminar_archivos($_GET['del']);
-  redirect('productsList.php');
-
+  businessBorrarComentario($_GET['del']);
+  redirect('comentariosList.php');
 }
 
 ?>
@@ -38,12 +37,12 @@ if(isset($_GET['del'])){
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Productos</h1>
+            <h1>Comentarios</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active"><a href="#">Productos</a></li>
+              <li class="breadcrumb-item active"><a href="#">Comentarios</a></li>
             </ol>
           </div>
         </div>
@@ -60,7 +59,7 @@ if(isset($_GET['del'])){
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-              <h3 class="card-title">Lista de productos</h3><a href="productsNew.php"><span class="material-icons">add</span></a>
+              <h3 class="card-title">Lista de comentarios</h3>
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 200px;">
                     <input type="text" name="table_search" class="form-control float-right" placeholder="Busqueda">
@@ -78,36 +77,25 @@ if(isset($_GET['del'])){
                 <table class="table table-head-fixed text-nowrap">
                   <thead>
                     <tr>
-                      <th>ID</th>
+                      <th>fecha</th>
                       <th>Nombre</th>
-                      <th>Precio</th>
-                      <th>Contenido</th>
-                      <th>Cosecha</th>
-                      <th>Categoría Tipo</th>
-                      <th>Categoría Uva</th>
-                      <th>Marca</th>
-                      <th>Descripción</th>
-                      <th>Activo</th>
+                      <th>Email</th>
+                      <th>mensaje</th>
+                      <th>producto</th>
                       <th>Acciones</th>
                     </tr>
                   </thead>
                   <tbody>
 
-                    <?php foreach(businessObtenerProductos() as $prod){?>
+                    <?php foreach(businessObtenerComentarios() as $prod){?>
                     <tr>
-                      <td><?php echo $prod ['id']?></td>
+                      <td><?php echo $prod ['fecha']?></td>
                       <td><?php echo $prod ['nombre']?></td>
-                      <td><?php echo "$ ". $prod ['precio']?></td>
-                      <td><?php echo $prod ['contenido']?></td>
-                      <td><?php echo $prod ['cosecha']?></td>
-                      <td><?php echo $catTipo[$prod ['categotiaTipo']]['nombre']?></td>
-                      <td><?php echo $catUva[$prod ['categotiaUva']]['nombre']?></td>
-                      <td><?php echo $marca[$prod ['marca']]['Bodegas']?></td>
-                      <td><?php echo $prod ['descripcion']?></td>
-                      <td><?php echo $prod ['activa']?'SI':'NO'?></td>
+                      <td><?php echo $prod ['email']?></td>
+                      <td><?php echo $prod ['mensaje']?></td>
+                      <td><?php echo $prod ['producto']?></td>
                       <td>
-                      <a href="productsNew.php?edit=<?php echo $prod ['id']?>"><span class="material-icons">edit</span></a>
-                      <a href="productsList.php?del=<?php echo $prod ['id']?>"><span class="material-icons">delete</span></a>
+                      <a href="comentariosList.php?del=<?php echo $prod ['fecha']?>"><span class="material-icons">delete</span></a>
                       </td>
                     </tr>
                     <?php }?>

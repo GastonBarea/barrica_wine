@@ -51,7 +51,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="comentariosList.php" class="nav-link <?php echo ($seccion=='comentariosList')?'active':''; ?>">
               <i class="nav-icon fas fa-th"></i>
               <p>Comentarios</p>
             </a>

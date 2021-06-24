@@ -7,7 +7,7 @@ function businessObtenerComentarios(){
 return daoObtenerComentarios();
 }
 function businessObtenerComentario($id){
-    return daoObtenerComentarios();
+    return daoObtenerComentario($id);
 }
 function businessModificarComentario($datos = array(), $id){
 daoModificarComentario($datos, $id);
