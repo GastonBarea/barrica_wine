@@ -34,7 +34,7 @@ function daoModificarComentario($datos = array(), $id){
         'email' => $datos['email'],
         'mensaje' => $datos['mensaje'],
         'producto' => $datos['producto'],
-        'fecha' => date('H:i:s d-m-Y')
+        'fecha' => $datos['fecha'],
     );
     $fp = fopen(DIR_BASE.'datos/comentarios.json','w');
     fwrite($fp, json_encode($comentarios));

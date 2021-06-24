@@ -23,8 +23,6 @@ $producto = array(
   'categotiaUva' => '',
   'marca' => '',
   'descripcion' => '',
-  'imagenLG' => '',
-  'imagenSM' => '',
   'activa' => isset($datos['activa'])?'false':'true',
 );
 

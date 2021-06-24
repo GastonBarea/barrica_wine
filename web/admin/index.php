@@ -1,5 +1,6 @@
 <?php
-include_once('include/head.php') 
+$seccion = 'index';
+include_once('include/head.php');
 ?>
 
   <div class="wrapper">

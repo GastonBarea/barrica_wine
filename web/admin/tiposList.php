@@ -1,5 +1,5 @@
 <?php
-$seccion = 'productsList';
+$seccion = 'tiposList';
 include_once('include/head.php');
 include_once('include/topbar.php'); 
 include_once('include/lateralbar.php');
@@ -13,8 +13,8 @@ $catUva = businessObtenerUvas();
 $marca = businessObtenerMarcas();
 
 if(isset($_GET['del'])){
-  businessBorrarProducto($_GET['del']);
-  redirect('productsList.php');
+  businessBorrarTipo($_GET['del']);
+  redirect('tiposList.php');
 }
 
 ?>
@@ -36,12 +36,12 @@ if(isset($_GET['del'])){
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Productos</h1>
+            <h1>Categoría Tipos</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active"><a href="#">Productos</a></li>
+              <li class="breadcrumb-item active"><a href="#">Categoría Tipos</a></li>
             </ol>
           </div>
         </div>
@@ -58,7 +58,7 @@ if(isset($_GET['del'])){
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-              <h3 class="card-title">Lista de productos</h3><a href="productsNew.php"><span class="material-icons">add</span></a>
+              <h3 class="card-title">Lista Categoría Tipos</h3><a href="tiposNew.php"><span class="material-icons">add</span></a>
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 200px;">
                     <input type="text" name="table_search" class="form-control float-right" placeholder="Busqueda">
@@ -77,35 +77,23 @@ if(isset($_GET['del'])){
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>Nombre</th>
-                      <th>Precio</th>
-                      <th>Contenido</th>
-                      <th>Cosecha</th>
-                      <th>Categoría Tipo</th>
-                      <th>Categoría Uva</th>
-                      <th>Marca</th>
+                      <th>Tipo</th>
                       <th>Descripción</th>
-                      <th>Activo</th>
+                      <th>Activa</th>
                       <th>Acciones</th>
                     </tr>
                   </thead>
                   <tbody>
 
-                    <?php foreach(businessObtenerProductos() as $prod){?>
+                    <?php foreach(businessObtenerTipos() as $prod){?>
                     <tr>
                       <td><?php echo $prod ['id']?></td>
                       <td><?php echo $prod ['nombre']?></td>
-                      <td><?php echo "$ ". $prod ['precio']?></td>
-                      <td><?php echo $prod ['contenido']?></td>
-                      <td><?php echo $prod ['cosecha']?></td>
-                      <td><?php echo $catTipo[$prod ['categotiaTipo']]['nombre']?></td>
-                      <td><?php echo $catUva[$prod ['categotiaUva']]['nombre']?></td>
-                      <td><?php echo $marca[$prod ['marca']]['Bodegas']?></td>
                       <td><?php echo $prod ['descripcion']?></td>
                       <td><?php echo $prod ['activa']?'SI':'NO'?></td>
                       <td>
-                      <a href="productsNew.php?edit=<?php echo $prod ['id']?>"><span class="material-icons">edit</span></a>
-                      <a href="productsList.php?del=<?php echo $prod ['id']?>"><span class="material-icons">delete</span></a>
+                      <a href="tiposNew.php?edit=<?php echo $prod ['id']?>"><span class="material-icons">edit</span></a>
+                      <a href="tiposList.php?del=<?php echo $prod ['id']?>"><span class="material-icons">delete</span></a>
                       </td>
                     </tr>
                     <?php }?>
