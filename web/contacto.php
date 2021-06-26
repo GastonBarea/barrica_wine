@@ -1,7 +1,16 @@
 <?php 
 $seccion = 'Contacto';
-include_once('config/config.php');
-include_once(DIR_BASE.'include/header.php')?>
+include_once('../barrica_wine/web/config/config.php');
+include_once(DIR_BASE.'header.php');
+require_once(DIR_BASE.'web/business/contactBusiness.php');
+
+if(!empty($_POST['email'])){
+    var_dump($_POST);
+    sendMail($_POST);
+}
+?>
+
+
 
 <section class="vinos">
     
@@ -10,7 +19,7 @@ include_once(DIR_BASE.'include/header.php')?>
     <div class="container conten-center">
  
   
-    <form action="#" method="POST">
+    <form action="" method="POST">
            <input class="form" type="text" name="nombre" placeholder="*Nombre" required>
             <br>
             <input class="form" type="text" name="apellido" placeholder="*Apellido" required>
@@ -30,6 +39,6 @@ include_once(DIR_BASE.'include/header.php')?>
 
 <?php 
 
-//var_dump($_POST);
+var_dump($_POST);
 
 include_once(DIR_BASE.'include/footer.php')?>
