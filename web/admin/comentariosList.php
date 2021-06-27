@@ -4,14 +4,10 @@ include_once('include/head.php');
 include_once('include/topbar.php'); 
 include_once('include/lateralbar.php');
 include_once(DIR_BASE.'business/productsBusiness.php');
-include_once(DIR_BASE.'business/trademarkBusiness.php');
-include_once(DIR_BASE.'business/categoryTipoBusiness.php');
-include_once(DIR_BASE.'business/categoryUvaBusiness.php');
 include_once(DIR_BASE.'business/comentariosBusiness.php');
 
-$catTipo = businessObtenerTipos();
-$catUva = businessObtenerUvas();
-$marca = businessObtenerMarcas();
+
+$productos = businessObtenerProductos();
 
 if(isset($_GET['del'])){
   businessBorrarComentario($_GET['del']);
@@ -59,7 +55,18 @@ if(isset($_GET['del'])){
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-              <h3 class="card-title">Lista de comentarios</h3>
+                <label>Lista de comentarios: </label>
+                <form action="comentariosList.php" target="">
+                <select name="seleccionProucto" id="seleccionPro">
+                <option value="">VER TODOS</option>
+                  <?php
+                  foreach (businessObtenerProductos() as $catProd) {?>
+                  <option value="<?php echo $catProd ['id']?>"><?php echo $catProd['nombre']?></option>
+                  <?php } ?>
+                  <input type="submit" value="Enviar">
+                </select>
+                </form>
+
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 200px;">
                     <input type="text" name="table_search" class="form-control float-right" placeholder="Busqueda">
@@ -86,19 +93,34 @@ if(isset($_GET['del'])){
                     </tr>
                   </thead>
                   <tbody>
-
-                    <?php foreach(businessObtenerComentarios() as $prod){?>
+                     
+                    <?php                   
+                    
+                    foreach(businessObtenerComentarios() as $prod){
+                      $print = TRUE;
+                      
+                      if(!empty($_GET['seleccionProucto']) AND $print){
+                        if($productos[$prod ['producto']]['id'] != $_GET['seleccionProucto']) $print = FALSE;
+                      }
+                      
+                      
+                      if($print){
+                        if(!empty($_GET['seleccionProucto'])){
+                       }
+                      ?>
+                      
+                      
                     <tr>
                       <td><?php echo $prod ['fecha']?></td>
                       <td><?php echo $prod ['nombre']?></td>
                       <td><?php echo $prod ['email']?></td>
                       <td><?php echo $prod ['mensaje']?></td>
-                      <td><?php echo $prod ['producto']?></td>
+                      <td><?php echo $productos[$prod ['producto']]['nombre']?></td>
                       <td>
-                      <a href="comentariosList.php?del=<?php echo $prod ['fecha']?>"><span class="material-icons">delete</span></a>
+                      <a href="comentariosList.php?del=<?php echo $prod['id']?>"><span class="material-icons">delete</span></a>
                       </td>
                     </tr>
-                    <?php }?>
+                    <?php } } ?>
                     
                   </tbody>
                 </table>

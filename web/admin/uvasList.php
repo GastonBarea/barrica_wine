@@ -3,14 +3,8 @@ $seccion = 'uvasList';
 include_once('include/head.php');
 include_once('include/topbar.php'); 
 include_once('include/lateralbar.php');
-include_once(DIR_BASE.'business/productsBusiness.php');
-include_once(DIR_BASE.'business/trademarkBusiness.php');
-include_once(DIR_BASE.'business/categoryTipoBusiness.php');
 include_once(DIR_BASE.'business/categoryUvaBusiness.php');
 
-$catTipo = businessObtenerTipos();
-$catUva = businessObtenerUvas();
-$marca = businessObtenerMarcas();
 
 if(isset($_GET['del'])){
   businessBorrarUva($_GET['del']);

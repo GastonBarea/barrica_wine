@@ -22,7 +22,7 @@ function daoGuardarUva($datos = array()){
 
 }
 function daoObtenerUva($id){
-    $uvas = daoObtenerCategoriasUva();
+    iasUva();
     return $uvas[$id];
 }
 function daoModificarUva($datos = array(), $id){

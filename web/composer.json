@@ -1,0 +1,17 @@
+{
+    "name": "gaston/barrica_wine",
+    "autoload": {
+        "psr-4": {
+            "Gaston\\BarricaWine\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "GastonBarea",
+            "email": "barea_gaston@gmail.com"
+        }
+    ],
+    "require": {
+        "swiftmailer/swiftmailer": "6.0"
+    }
+}
