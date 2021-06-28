@@ -83,8 +83,8 @@ if(isset ($_POST['form1'])){
 
                                     <div class="card-body">
                                         <h3><?php echo $producto['nombre'];?></h3>
-                                        <h4><?php echo $producto['marca'];?></h4>
-                                        <p class="card-text"><?php echo $producto['precio'];?></p>
+                                        <h4><?php echo $marcas[$producto['categotiaTipo']]['Bodegas'];?></h4>
+                                        <p class="card-text"><?php echo '$ '. $producto['precio'];?></p>
                                         <p class="card-text"><?php echo $producto['contenido'];?></p>
                                         <p class="card-text"><?php echo $producto['cosecha'];?></p>
                                         <p class="card-text"><?php echo $categorias_uvas[$producto['categotiaTipo']]['nombre'];?></p>
