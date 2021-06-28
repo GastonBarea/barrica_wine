@@ -1,8 +1,7 @@
-
- <?php
+<?php
 include_once('include/head.php');
 include_once(DIR_BASE.'business/productsBusiness.php');
-include_once(DIR_BASE.'business/marcasBusiness.php');
+include_once(DIR_BASE.'business/trademarkBusiness.php');
 include_once(DIR_BASE.'business/categoryTipoBusiness.php');
 include_once(DIR_BASE.'business/categoryUvaBusiness.php');
 
@@ -10,19 +9,18 @@ if (isset($_POST['submit'])) {
   if (!empty($_GET['edit'])) {
     businessModificarMarca($_POST,$_GET['edit']);
   }else {
-    businessGuardarMarcas($_POST);
+    businessGuardarMarca($_POST);
   }
   redirect('marcasList.php');
 }
 
-$producto = array(
-  'id' => '',
+$marcas = array(
   'Bodegas' => '',
-  'activa' => isset($datos['activa'])?'false':'true',
+  'Activa' => isset($datos['Activa'])?'false':'true',
 );
 
 if (!empty($_GET['edit'])) {
-  $producto = businessObtenerMarcas($_GET['edit']);
+  $marcas = businessObtenerMarca($_GET['edit']);
 }
 
 ?>
@@ -49,21 +47,21 @@ if (!empty($_GET['edit'])) {
                   <div class="col-lg-12 col-md-12 col-sm-12">
                           <div class="card card-primary">
                             <div class="card-header">
-                              <h3 class="card-title">Ingresar marca</h3>
+                              <h3 class="card-title">Ingresar Marca</h3>
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->
                             <form action="" method="post" enctype="multipart/form-data">
-                              <div class="card-body">                                  
+                              <div class="card-body">
                                 <div class="form-group">
-                                  <label>bodega</label>
-                                  <textarea type="text" class="form-control" name="Bodegas" placeholder="Bodega..." ><?php echo $producto['Bodegas'] ?></textarea>
-                                </div>                            
+                                  <label>Marcas</label>
+                                  <input type="text" class="form-control" name="Bodegas" value="<?php echo $marcas['Bodegas'] ?>" placeholder="Nombre...">
+                                </div>
                                 <div class="form-check">
-                                  <input type="checkbox" class="form-check-input" value="true" name="Activa" <?php echo ($producto['activa']==true)?'cheked':'' ?>>
+                                  <input type="checkbox" class="form-check-input" value="true" name="Activa" <?php echo ($marcas['Activa']==true)?'cheked':'' ?>>
                                   <label class="form-check-label" >Activo</label>
                                 </div>
-                                      </div>
+                              </div>
                           <!-- /.card-body -->
 
                           <div class="card-footer">

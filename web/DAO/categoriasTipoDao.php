@@ -1,55 +1,46 @@
 <?php
-
-function daoGuardarCategoriasTipos($datos = array()){
-    $productos = daoObtenerCategoriasTipo();
+function  daoObtenerCategoriasTipo(){
+if (file_exists(DIR_BASE.'datos/tipos.json')){
+    $tipos = json_decode(file_get_contents(DIR_BASE.'datos/tipos.json'),true);
+}
+else{
+    $tipos = array();
+}
+return $tipos;
+}
+function daoGuardarTipo($datos = array()){
+    $tipos = daoObtenerCategoriasTipo();
     $id = date('Ymdhisu');
-    $productos[$id] = array(
+    $tipos[$id] = array(
         'id' => $id,
         'nombre' => $datos['nombre'],
         'descripcion' => $datos['descripcion'],
         'activa' => isset($datos['activa'])?true:false,
     );
-    file_put_contents(DIR_BASE.'datos/tipos.json',json_encode($productos));
+    file_put_contents(DIR_BASE.'datos/tipos.json',json_encode($tipos));
+    return $id;
 
 }
-
-function daoObtenerCategoriaTipo($id){
-    $productos = daoObtenerCategoriasTipo();
-    return $productos[$id];
+function daoObtenerTipo($id){
+    $tipos = daoObtenerCategoriasTipo();
+    return $tipos[$id];
 }
-
-
-function daoObtenerCategoriasTipo(){
-if (file_exists(DIR_BASE.'datos/tipos.json')){
-    $catsTipos = json_decode(file_get_contents(DIR_BASE.'datos/tipos.json'),true);
+function daoModificarTipo($datos = array(), $id){
+        $tipos = daoObtenerCategoriasTipo();
+    $tipos[$id] = array(
+        'id' => $id,
+        'nombre' => $datos['nombre'],
+        'descripcion' => $datos['descripcion'],
+        'activa' => isset($datos['activa'])?true:false,
+    );
+    file_put_contents(DIR_BASE.'datos/tipos.json',json_encode($tipos));
 }
-else{
-    $catsTipos = array();
-}
-return $catsTipos;
-}
-
-
-function daoModificarCategoriaTipo($datos = array(), $id){
-    $productos = daoObtenerCategoriasTipo();
-$productos[$id] = array(
-    'id' => $id,
-    'nombre' => $datos['nombre'],
-    'descripcion' => $datos['descripcion'],
-    'activa' => isset($datos['activa'])?true:false,
-);
-file_put_contents(DIR_BASE.'datos/tipos.json',json_encode($productos));
-}
-
-function daoBorrarCategoriaTipo($id){
-    $productos = daoObtenerCategoriasTipo();
-    if (isset($productos[$id])) {
-        unset($productos[$id]);
+function daoBorrarTipo($id){
+    $tipos = daoObtenerCategoriasTipo();
+    if (isset($tipos[$id])) {
+        unset($tipos[$id]);
     }
-    /*$fp = fopen(DIR_BASE.'datos/productos.json','w');
-    fwrite($fp, json_encode($productos));
-    fclose($fp);*/
-    file_put_contents(DIR_BASE.'datos/tipos.json',json_encode($productos));
+    file_put_contents(DIR_BASE.'datos/tipos.json',json_encode($tipos));
 }
 
 

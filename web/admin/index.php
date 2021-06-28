@@ -1,5 +1,6 @@
 <?php
-include_once('include/head.php') 
+$seccion = 'index';
+include_once('include/head.php');
 ?>
 
   <div class="wrapper">
@@ -23,7 +24,7 @@ include_once('include/head.php')
               <div class="contaner">
                 <div class="row">
                   <div class="col-lg-12 col-md-12 col-sm-12">
-                  <h2>Bienvenido SuperAdmin</h2>
+                  <h2>Bienvenido a Admin</h2>
                   </div>
                 </div><!-- /.row -->
               </div><!-- /.contaner -->

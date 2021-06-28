@@ -1,7 +1,7 @@
 <?php
 include_once('include/head.php');
 include_once(DIR_BASE.'business/productsBusiness.php');
-include_once(DIR_BASE.'business/marcasBusiness.php');
+include_once(DIR_BASE.'business/trademarkBusiness.php');
 include_once(DIR_BASE.'business/categoryTipoBusiness.php');
 include_once(DIR_BASE.'business/categoryUvaBusiness.php');
 
@@ -23,8 +23,6 @@ $producto = array(
   'categotiaUva' => '',
   'marca' => '',
   'descripcion' => '',
-  'imagenLG' => '',
-  'imagenSM' => '',
   'activa' => isset($datos['activa'])?'false':'true',
 );
 
@@ -81,7 +79,7 @@ if (!empty($_GET['edit'])) {
                                 <div class="form-group m-5">
                                   <label>Categoría Tipo: </label>
                                   <select name="categotiaTipo">
-                                    <?php foreach (businessObtenerCategoriaTipo() as $catTipo) {?>
+                                    <?php foreach (businessObtenerTipos() as $catTipo) {?>
                                     <option value="<?php echo $catTipo['id'] ?>" <?php echo ($catTipo['id'] == $producto['categotiaTipo'])?'selected':'' ?>><?php echo $catTipo['nombre'] ?></option>
                                     <?php } ?>
                                   </select>
@@ -89,7 +87,7 @@ if (!empty($_GET['edit'])) {
                                 <div class="form-group m-5">
                                   <label>Categoría Uva: </label>
                                   <select name="categotiaUva">
-                                    <?php foreach (businessObtenerCategoriaUva() as $catUva) {?>
+                                    <?php foreach (businessObtenerUvas() as $catUva) {?>
                                     <option value="<?php echo $catUva['id'] ?>" <?php echo ($catUva['id'] == $producto['categotiaUva'])?'selected':'' ?>><?php echo $catUva['nombre'] ?></option>
                                     <?php } ?>
                                   </select>
@@ -107,36 +105,11 @@ if (!empty($_GET['edit'])) {
                                   <textarea type="text" class="form-control" name="descripcion" placeholder="Descripción..." ><?php echo $producto['descripcion'] ?></textarea>
                                 </div>
                                 <div class="form-group">
-                                  <label for="exampleInputPassword1">ImagenLG</label>
-                                  <input type="text" class="form-control" name="imagenLG" value="<?php echo $producto['imagenLG'] ?>" placeholder="ImagenLG...">
-                                </div>
-                                <div class="form-group">
-                                  <label>ImagenSM</label>
-                                  <input type="text" class="form-control" name="imagenSM" value="<?php echo $producto['imagenSM'] ?>" placeholder="ImagenSM...">
-                                </div>
-                                <!--div class="form-group">
-                                  <label for="exampleInputFile">Subir Imagen</label>
+                                  <label for="exampleInputFile">Subir Imagen...</label>
                                   <div class="input-group">
                                     <div class="custom-file">
-                                      <input type="file" name="imagen[]" multiple class="custom-file-input" id="">
-                                      <label class="custom-file-label">Choose file</label>
-                                    </div>
-                                  </div>
-                                </div-->
-                                <div class="form-group">
-                                  <label for="exampleInputFile">Subir ImagenLG</label>
-                                  <div class="input-group">
-                                    <div class="custom-file">
-                                      <input type="file" name="ImagenLG" class="custom-file-input" id=""><!--PARA CARGAR LA IMAGEN-->
-                                      <label class="custom-file-label">Choose file</label>
-                                    </div>
-                                  </div>
-                                </div><div class="form-group">
-                                  <label for="exampleInputFile">Subir ImagenSM</label>
-                                  <div class="input-group">
-                                    <div class="custom-file">
-                                      <input type="file" name="ImagenSM" class="custom-file-input" id=""><!--PARA CARGAR LA IMAGEN-->
-                                      <label class="custom-file-label">Choose file</label>
+                                      <input type="file" name="imagen[]" multiple class="custom-file-input" id=""><!--PARA CARGAR LA IMAGEN-->
+                                      <label class="custom-file-label"></label>
                                     </div>
                                   </div>
                                 </div>

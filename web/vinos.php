@@ -46,7 +46,12 @@ $marcas = json_decode($marcas_j,true);
                 <div class="col-lg-3 col-md-6 col-sm-12">
                         <article class="">
                             <div class="card">
-                                <img src="<?php echo 'img/'.$producto['imagenLG'];?>" alt="...">
+                                <?php $imagenes = businessObtenerImagenesProducto($producto['id']);
+                                    if (!empty($imagenes)){ ?>
+                                        <img src="<?php echo str_replace('small','big',$imagenes[0]);?>" alt="..."><!--imagen original-->
+                                    <?php } else{ ?>
+                                        <img src="<?php echo URL_BASE?>img/copa.png" alt="..."><!--imagen por si falta la del producto-->
+                                    <?php } ?>
                                 <div class="card-body">
                                     <h3><?php echo cortar_palabras($producto['nombre'],10)?></h3>
                                     <h4><?php echo cortar_palabras($marcas[$producto['categotiaTipo']]['Bodegas'],20)?></h4>

@@ -1,18 +1,13 @@
 <?php
+$seccion = 'uvasList';
 include_once('include/head.php');
 include_once('include/topbar.php'); 
 include_once('include/lateralbar.php');
-include_once(DIR_BASE.'business/categoryTipoBusiness.php');
-include_once(DIR_BASE.'business/marcasBusiness.php');
-include_once(DIR_BASE.'business/categoryTipoBusiness.php');
 include_once(DIR_BASE.'business/categoryUvaBusiness.php');
 
-$catTipo = businessObtenerCategoriaTipo();
-$catUva = businessObtenerCategoriaUva();
-$marca = businessObtenerMarcas();
 
 if(isset($_GET['del'])){
-  businessBorrarCategoriaUva($_GET['del']);
+  businessBorrarUva($_GET['del']);
   redirect('uvasList.php');
 }
 
@@ -35,12 +30,12 @@ if(isset($_GET['del'])){
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Categorias: Uvas</h1>
+            <h1>Categoría Uvas</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active"><a href="#">Categorias Uvas</a></li>
+              <li class="breadcrumb-item active"><a href="#">Categoría Uvas</a></li>
             </ol>
           </div>
         </div>
@@ -57,7 +52,7 @@ if(isset($_GET['del'])){
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-              <h3 class="card-title">Lista de Categorias uvas</h3><a href="uvasNew.php"><span class="material-icons">add</span></a>
+              <h3 class="card-title">Lista Categoría Uvas</h3><a href="uvasNew.php"><span class="material-icons">add</span></a>
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 200px;">
                     <input type="text" name="table_search" class="form-control float-right" placeholder="Busqueda">
@@ -76,20 +71,20 @@ if(isset($_GET['del'])){
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>Nombre</th>
+                      <th>Uva</th>
                       <th>Descripción</th>
-                      <th>Activo</th>
+                      <th>Activa</th>
                       <th>Acciones</th>
                     </tr>
                   </thead>
                   <tbody>
 
-                    <?php foreach(businessObtenerCategoriaUva() as $prod){?>
+                    <?php foreach(businessObtenerUvas() as $prod){?>
                     <tr>
                       <td><?php echo $prod ['id']?></td>
                       <td><?php echo $prod ['nombre']?></td>
                       <td><?php echo $prod ['descripcion']?></td>
-                      <td><?php echo $prod ['activa']?'SI':'NO'?></td>
+                      <td><?php echo $prod ['Activa']?'SI':'NO'?></td>
                       <td>
                       <a href="uvasNew.php?edit=<?php echo $prod ['id']?>"><span class="material-icons">edit</span></a>
                       <a href="uvasList.php?del=<?php echo $prod ['id']?>"><span class="material-icons">delete</span></a>

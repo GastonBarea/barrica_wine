@@ -1,18 +1,19 @@
 <?php
+$seccion = 'tiposList';
 include_once('include/head.php');
 include_once('include/topbar.php'); 
 include_once('include/lateralbar.php');
-include_once(DIR_BASE.'business/categoryTipoBusiness.php');
-include_once(DIR_BASE.'business/marcasBusiness.php');
+include_once(DIR_BASE.'business/productsBusiness.php');
+include_once(DIR_BASE.'business/trademarkBusiness.php');
 include_once(DIR_BASE.'business/categoryTipoBusiness.php');
 include_once(DIR_BASE.'business/categoryUvaBusiness.php');
 
-$catTipo = businessObtenerCategoriaTipo();
-$catUva = businessObtenerCategoriaUva();
+$catTipo = businessObtenerTipos();
+$catUva = businessObtenerUvas();
 $marca = businessObtenerMarcas();
 
 if(isset($_GET['del'])){
-  businessBorrarCategoriaTipo($_GET['del']);
+  businessBorrarTipo($_GET['del']);
   redirect('tiposList.php');
 }
 
@@ -35,12 +36,12 @@ if(isset($_GET['del'])){
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Categorias: tipos</h1>
+            <h1>Categoría Tipos</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active"><a href="#">Categorias Tipo</a></li>
+              <li class="breadcrumb-item active"><a href="#">Categoría Tipos</a></li>
             </ol>
           </div>
         </div>
@@ -57,7 +58,7 @@ if(isset($_GET['del'])){
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-              <h3 class="card-title">Lista de Categorias Tipo</h3><a href="tiposNew.php"><span class="material-icons">add</span></a>
+              <h3 class="card-title">Lista Categoría Tipos</h3><a href="tiposNew.php"><span class="material-icons">add</span></a>
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 200px;">
                     <input type="text" name="table_search" class="form-control float-right" placeholder="Busqueda">
@@ -76,15 +77,15 @@ if(isset($_GET['del'])){
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>Nombre</th>
+                      <th>Tipo</th>
                       <th>Descripción</th>
-                      <th>Activo</th>
+                      <th>Activa</th>
                       <th>Acciones</th>
                     </tr>
                   </thead>
                   <tbody>
 
-                    <?php foreach(businessObtenerCategoriaTipo() as $prod){?>
+                    <?php foreach(businessObtenerTipos() as $prod){?>
                     <tr>
                       <td><?php echo $prod ['id']?></td>
                       <td><?php echo $prod ['nombre']?></td>

@@ -13,11 +13,10 @@ function daoGuardarProductos($datos = array()){
         'categotiaUva' => $datos['categotiaUva'],
         'marca' => $datos['marca'],
         'descripcion' => $datos['descripcion'],
-        'imagenLG' => $datos['imagenLG'],
-        'imagenSM' => $datos['imagenSM'],
         'activa' => isset($datos['activa'])?true:false,
     );
     file_put_contents(DIR_BASE.'datos/productos.json',json_encode($productos));
+    return $id;
 
 }
 
@@ -48,8 +47,6 @@ function daoModificarProducto($datos = array(), $id){
         'categotiaUva' => $datos['categotiaUva'],
         'marca' => $datos['marca'],
         'descripcion' => $datos['descripcion'],
-        'imagenLG' => $datos['imagenLG'],
-        'imagenSM' => $datos['imagenSM'],
         'activa' => isset($datos['activa'])?true:false,
     );
     file_put_contents(DIR_BASE.'datos/productos.json',json_encode($productos));
@@ -60,9 +57,6 @@ function daoBorrarProducto($id){
     if (isset($productos[$id])) {
         unset($productos[$id]);
     }
-    /*$fp = fopen(DIR_BASE.'datos/productos.json','w');
-    fwrite($fp, json_encode($productos));
-    fclose($fp);*/
     file_put_contents(DIR_BASE.'datos/productos.json',json_encode($productos));
 }
 

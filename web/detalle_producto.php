@@ -30,7 +30,32 @@ if(isset ($_POST['form1'])){
                     <div class="col-lg-4 col-md-4 col-sm-4">
                             <article class="">
                                 <div class="card m-1">
-                                    <img src="<?php echo 'img/'.$producto['imagenLG'];?>" alt="...">
+                                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                      <div class="carousel-inner">
+                                        
+                                        <?php $imagenes = businessObtenerImagenesProducto($producto['id']);
+                                        if (!empty($imagenes)){
+                                            $active = 'active';
+                                            foreach($imagenes as $img){ ?>
+                                        <div class="carousel-item <?php echo $active; $active=''; ?>">
+                                            <img src="<?php echo str_replace('small','big',$img);?>" class="d-block w-100" alt="..."><!--imagen original-->
+                                        </div>
+                                        <?php } } else{ ?>
+                                        <div class="carousel-item active">
+                                            <img src="<?php echo URL_BASE?>img/copa.png" class="d-block w-100" alt="..."><!--imagen por si falta la del producto-->
+                                        </div>
+                                        <?php } ?>
+                                        
+                                      </div>
+                                      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                      </a>
+                                      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                      </a>
+                                    </div>
                                 </div>
                             </article>
                     </div>
@@ -58,8 +83,8 @@ if(isset ($_POST['form1'])){
 
                                     <div class="card-body">
                                         <h3><?php echo $producto['nombre'];?></h3>
-                                        <h4><?php echo $producto['marca'];?></h4>
-                                        <p class="card-text"><?php echo $producto['precio'];?></p>
+                                        <h4><?php echo $marcas[$producto['categotiaTipo']]['Bodegas'];?></h4>
+                                        <p class="card-text"><?php echo '$ '. $producto['precio'];?></p>
                                         <p class="card-text"><?php echo $producto['contenido'];?></p>
                                         <p class="card-text"><?php echo $producto['cosecha'];?></p>
                                         <p class="card-text"><?php echo $categorias_uvas[$producto['categotiaTipo']]['nombre'];?></p>

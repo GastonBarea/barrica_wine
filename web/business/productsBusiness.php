@@ -1,28 +1,76 @@
 <?php
 include_once(DIR_BASE.'DAO/productosDao.php');
+include_once(DIR_BASE.'helpers/image.php');
+
+
 function businessGuardarProductos($datos = array()){
-  daoGuardarProductos($datos);
-}
+  
+  $id = daoGuardarProductos($datos);
+  if(!empty($_FILES['imagen'])){
+     saveImage($_FILES['imagen'],$id);
+   }
+
+  }
+
 function businessObtenerProductos(){
 return daoObtenerProductos();
 }
+
 function businessObtenerProducto($id){
     return daoObtenerProducto($id);
 }
+
 function businessModificarProducto($datos = array(), $id){
+
   daoModificarProducto($datos, $id);
-/*  if(!empty($_FILES)){
-    if(is_dir(DIR_BASE.'images/'.$id)){
-      mkdir(DIR_BASE.'images/'.$id);
+
+    if(!empty($_FILES['imagen'])){
+      saveImage($_FILES['imagen'],$id);
     }
 
-    move_uploaded_file($FILES['tmp_name'],DIR_BASE.'images/'.$id.'/'.$FILES['name']);
-    $datos['imagenLG'] = $FILES['name']
-  }
-  var_dump($_FILES); die();*/
 
 }
+
+function saveImage($datos,$id){
+  //ini_set('upload_max_filesize','3M');/*Cambia los balores del php*/
+  //ini_set('upload_max_size','10M');/*Cambia los balores del php*/
+  //ini_set('memory_size','128M');/*Cambia los balores del php*/
+  //(';extension=gd','extension=gd');/*Da click en el botón de 'Config' de 'Apache', y seleccionar 'PHP (php.ini)*/
+    $ruta = DIR_BASE.'img/'.$id.'/';
+  if(!is_dir($ruta)){
+    mkdir($ruta);
+  }
+  $tamanhos = array(0 => array('nombre'=>'big','ancho'=>'800','alto'=>'800'),
+  	                1 => array('nombre'=>'small','ancho'=>'400','alto'=>'400'));
+  if (is_array($datos['name'])) {
+    $cantidadImg = cant_imagenes($ruta);
+    foreach ($datos['name'] as $index => $name) {
+    redimensionar($ruta,$datos['name'][$index],$datos['tmp_name'][$index],$index+$cantidadImg,$tamanhos);
+    }
+  }else {
+    redimensionar($ruta,$datos['name'],$datos['tmp_name'],cant_imagenes($ruta),$tamanhos);
+  }
+
+ 
+}
+
+function businessObtenerImagenesProducto($id){
+
+  return obtener_imagenes('img/'.$id.'/');
+  
+}
+
 function businessBorrarProducto($id){
 daoBorrarProducto($id);
 }
+
+
+function businesseliminar_archivos($id){
+  $dir = DIR_BASE.'img/'.$id.'/';
+ return eliminar_archivos($dir);
+
+}
+
+
+
 ?>

@@ -2,7 +2,9 @@
 
 function daoGuardarComentarios($datos = array()){
     $comentarios = daoObtenerComentarios();
-    $comentarios[date('Ymdhisu')] = array(
+    $id = date('Ymdhisu');
+    $comentarios[$id] = array(
+        'id' => $id,
         'nombre' => $datos['nombre'],
         'email' => $datos['email'],
         'mensaje' => $datos['mensaje'],
@@ -29,24 +31,31 @@ function daoObtenerComentario($id){
 }
 function daoModificarComentario($datos = array(), $id){
     $comentarios = daoObtenerComentarios();
+    $id = date('Ymdhisu');
     $comentarios[$id] = array(
+        'id' => $id,
         'nombre' => $datos['nombre'],
         'email' => $datos['email'],
         'mensaje' => $datos['mensaje'],
         'producto' => $datos['producto'],
-        'fecha' => date('H:i:s d-m-Y')
+        'fecha' => $datos['fecha'],
     );
     $fp = fopen(DIR_BASE.'datos/comentarios.json','w');
     fwrite($fp, json_encode($comentarios));
     fclose($fp);
 }
+
 function daoBorrarComentario($id){
     $comentarios = daoObtenerComentarios();
-    unset($comentarios[$id]);
-    $fp = fopen(DIR_BASE.'datos/comentarios.json','w');
-    fwrite($fp, json_encode($comentarios));
-    fclose($fp);
+    var_dump($comentarios);
+    
+    //die();
+    if (isset($comentarios[$id])) {
+        unset($comentarios[$id]);
+    }
+    file_put_contents(DIR_BASE.'datos/comentarios.json',json_encode($comentarios));
 }
+
 
 
 ?>

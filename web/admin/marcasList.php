@@ -1,15 +1,10 @@
 <?php
+$seccion = 'marcasList';
 include_once('include/head.php');
 include_once('include/topbar.php'); 
 include_once('include/lateralbar.php');
-include_once(DIR_BASE.'business/categoryTipoBusiness.php');
-include_once(DIR_BASE.'business/marcasBusiness.php');
-include_once(DIR_BASE.'business/categoryTipoBusiness.php');
-include_once(DIR_BASE.'business/categoryUvaBusiness.php');
+include_once(DIR_BASE.'business/trademarkBusiness.php');
 
-$catTipo = businessObtenerCategoriaTipo();
-$catUva = businessObtenerCategoriaUva();
-$marca = businessObtenerMarcas();
 
 if(isset($_GET['del'])){
   businessBorrarMarca($_GET['del']);
@@ -35,12 +30,12 @@ if(isset($_GET['del'])){
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>marcas</h1>
+            <h1>Marcas</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active"><a href="#">marcas</a></li>
+              <li class="breadcrumb-item active"><a href="#">Bodegas</a></li>
             </ol>
           </div>
         </div>
@@ -57,7 +52,7 @@ if(isset($_GET['del'])){
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-              <h3 class="card-title">Lista de marcas</h3><a href="marcasNew.php"><span class="material-icons">add</span></a>
+              <h3 class="card-title">Lista de Marcas</h3><a href="marcasNew.php"><span class="material-icons">add</span></a>
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 200px;">
                     <input type="text" name="table_search" class="form-control float-right" placeholder="Busqueda">
@@ -87,7 +82,7 @@ if(isset($_GET['del'])){
                     <tr>
                       <td><?php echo $prod ['id']?></td>
                       <td><?php echo $prod ['Bodegas']?></td>
-                      <td><?php echo $prod ['activa']?'SI':'NO'?></td>
+                      <td><?php echo $prod ['Activa']?'SI':'NO'?></td>
                       <td>
                       <a href="marcasNew.php?edit=<?php echo $prod ['id']?>"><span class="material-icons">edit</span></a>
                       <a href="marcasList.php?del=<?php echo $prod ['id']?>"><span class="material-icons">delete</span></a>
@@ -122,4 +117,4 @@ if(isset($_GET['del'])){
   </div><!-- /.content-wrapper -->
 
   <!-- Menú Footer -->
- <?php  include_once('include/footer.php') ?> 
+ <?php  include_once('include/footer.php') ?>  

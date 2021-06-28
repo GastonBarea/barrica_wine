@@ -1,57 +1,47 @@
 <?php
-
-function daoGuardarCategoriasUvas($datos = array()){
-    $productos = daoObtenerCategoriasUva();
+function  daoObtenerCategoriasUva(){
+if (file_exists(DIR_BASE.'datos/uvas.json')){
+    $uvas = json_decode(file_get_contents(DIR_BASE.'datos/uvas.json'),true);
+}
+else{
+    $uvas = array();
+}
+return $uvas;
+}
+function daoGuardarUva($datos = array()){
+    $uvas = daoObtenerCategoriasUva();
     $id = date('Ymdhisu');
-    $productos[$id] = array(
+    $uvas[$id] = array(
         'id' => $id,
         'nombre' => $datos['nombre'],
         'descripcion' => $datos['descripcion'],
-        'activa' => isset($datos['activa'])?true:false,
+        'Activa' => isset($datos['Activa'])?true:false,
     );
-    file_put_contents(DIR_BASE.'datos/uvas.json',json_encode($productos));
+    file_put_contents(DIR_BASE.'datos/uvas.json',json_encode($uvas));
+    return $id;
 
 }
-
-function daoObtenerCategoriaUva($id){
-    $productos = daoObtenerCategoriasUva();
-    return $productos[$id];
+function daoObtenerUva($id){
+    iasUva();
+    return $uvas[$id];
 }
-
-function daoObtenerCategoriasUva(){
-if (file_exists(DIR_BASE.'datos/uvas.json')){
-    $catsUvas = json_decode(file_get_contents(DIR_BASE.'datos/uvas.json'),true);
+function daoModificarUva($datos = array(), $id){
+        $uvas = daoObtenerCategoriasUva();
+    $uvas[$id] = array(
+        'id' => $id,
+        'nombre' => $datos['nombre'],
+        'descripcion' => $datos['descripcion'],
+        'Activa' => isset($datos['Activa'])?true:false,
+    );
+    file_put_contents(DIR_BASE.'datos/uvas.json',json_encode($uvas));
 }
-else{
-    $catsUvas = array();
-}
-return $catsUvas;
-}
-
-function daoModificarCategoriaUva($datos = array(), $id){
-    $productos = daoObtenerCategoriasUva();
-$productos[$id] = array(
-    'id' => $id,
-    'nombre' => $datos['nombre'],
-    'descripcion' => $datos['descripcion'],
-    'activa' => isset($datos['activa'])?true:false,
-);
-file_put_contents(DIR_BASE.'datos/uvas.json',json_encode($productos));
-}
-
-function daoBorrarCategoriaUva($id){
-    $productos = daoObtenerCategoriasUva();
-    if (isset($productos[$id])) {
-        unset($productos[$id]);
+function daoBorrarUva($id){
+    $uvas = daoObtenerCategoriasUva();
+    if (isset($uvas[$id])) {
+        unset($uvas[$id]);
     }
-    /*$fp = fopen(DIR_BASE.'datos/productos.json','w');
-    fwrite($fp, json_encode($productos));
-    fclose($fp);*/
-    file_put_contents(DIR_BASE.'datos/uvas.json',json_encode($productos));
+    file_put_contents(DIR_BASE.'datos/uvas.json',json_encode($uvas));
 }
-
-
-
 
 
 ?>

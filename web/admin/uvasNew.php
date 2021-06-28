@@ -1,28 +1,27 @@
 <?php
 include_once('include/head.php');
 include_once(DIR_BASE.'business/productsBusiness.php');
-include_once(DIR_BASE.'business/marcasBusiness.php');
+include_once(DIR_BASE.'business/trademarkBusiness.php');
 include_once(DIR_BASE.'business/categoryTipoBusiness.php');
 include_once(DIR_BASE.'business/categoryUvaBusiness.php');
 
 if (isset($_POST['submit'])) {
   if (!empty($_GET['edit'])) {
-    businessModificarCategoriaUva($_POST,$_GET['edit']);
+    businessModificarUva($_POST,$_GET['edit']);
   }else {
-    businessGuardarCategoriasUva($_POST);
+    businessGuardarUva($_POST);
   }
   redirect('uvasList.php');
 }
 
-$producto = array(
-  'id' => '',
+$uvas = array(
   'nombre' => '',
   'descripcion' => '',
-  'activa' => isset($datos['activa'])?'false':'true',
+  'Activa' => isset($datos['Activa'])?'false':'true',
 );
 
 if (!empty($_GET['edit'])) {
-  $producto = businessObtenerCategoriaUva($_GET['edit']);
+  $uvas = businessObtenerUva($_GET['edit']);
 }
 
 ?>
@@ -49,25 +48,25 @@ if (!empty($_GET['edit'])) {
                   <div class="col-lg-12 col-md-12 col-sm-12">
                           <div class="card card-primary">
                             <div class="card-header">
-                              <h3 class="card-title">Ingresar Producto</h3>
+                              <h3 class="card-title">Ingresar Categoría Uvas</h3>
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->
                             <form action="" method="post" enctype="multipart/form-data">
-                              <div class="card-body">                                  
+                              <div class="card-body">
                                 <div class="form-group">
-                                  <label>Nombre</label>
-                                  <input type="text" class="form-control" name="nombre" value="<?php echo $producto['nombre'] ?>" placeholder="Nombre...">
+                                  <label>Uva</label>
+                                  <input type="text" class="form-control" name="nombre" value="<?php echo $uvas['nombre'] ?>" placeholder="Nombre...">
                                 </div>
                                 <div class="form-group">
-                                  <label>Descripción</label>
-                                  <textarea type="text" class="form-control" name="descripcion" placeholder="Descripción..." ><?php echo $producto['descripcion'] ?></textarea>
-                                </div>                            
+                                  <label>Descripcion</label>
+                                  <input type="text" class="form-control" name="descripcion" value="<?php echo $uvas['descripcion'] ?>" placeholder="Descripción...">
+                                </div>
                                 <div class="form-check">
-                                  <input type="checkbox" class="form-check-input" value="true" name="activa" <?php echo ($producto['activa']==true)?'cheked':'' ?>>
+                                  <input type="checkbox" class="form-check-input" value="true" name="Activa" <?php echo ($uvas['Activa']==true)?'cheked':'' ?>>
                                   <label class="form-check-label" >Activo</label>
                                 </div>
-                                      </div>
+                              </div>
                           <!-- /.card-body -->
 
                           <div class="card-footer">
