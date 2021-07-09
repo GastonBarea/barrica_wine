@@ -8,6 +8,7 @@ include_once(DIR_BASE.'business/trademarkBusiness.php');
 include_once(DIR_BASE.'business/categoryTipoBusiness.php');
 include_once(DIR_BASE.'business/categoryUvaBusiness.php');
 
+$productos = businessObtenerProductos();
 $catTipo = businessObtenerTipos();
 $catUva = businessObtenerUvas();
 $marca = businessObtenerMarcas();
@@ -61,6 +62,46 @@ if(isset($_GET['del'])){
             <div class="card">
               <div class="card-header">
               <h3 class="card-title">Lista de productos</h3><a href="productsNew.php"><span class="material-icons">add</span></a>
+                <form action="productsList.php" target="">
+                <select name="seleccionProucto" id="seleccionPro">
+                <option value="">Buscar Producto</option>
+                  <?php
+                  foreach (businessObtenerProductos() as $catProd) {?>
+                  <option value="<?php echo $catProd ['id']?>"><?php echo $catProd['nombre']?></option>
+                  <?php } ?>
+                  <input type="submit" value="Ver">
+                </select>
+                </form>
+                <form action="productsList.php" target="">
+                <select name="seleccionTipos" id="seleccionPro"> 
+                <option value="">Buscar Tipo</option>
+                  <?php
+                  foreach (businessObtenerTipos() as $catProd) {?>
+                  <option value="<?php echo $catProd ['id']?>"><?php echo $catProd['nombre']?></option>
+                  <?php } ?>
+                  <input type="submit" value="Ver">
+                </select>
+                </form>
+                <form action="productsList.php" target="">
+                <select name="seleccionUvas" id="seleccionPro">
+                <option value="">Buscar Uva</option>
+                  <?php
+                  foreach (businessObtenerUvas() as $catProd) {?>
+                  <option value="<?php echo $catProd ['id']?>"><?php echo $catProd['nombre']?></option>
+                  <?php } ?>
+                  <input type="submit" value="Ver">
+                </select>
+                </form>
+                <form action="productsList.php" target="">
+                <select name="seleccionMarcas" id="seleccionPro">
+                <option value="">Buscar Marca</option>
+                  <?php
+                  foreach (businessObtenerMarcas() as $catProd) {?>
+                  <option value="<?php echo $catProd ['id']?>"><?php echo $catProd['Bodegas']?></option>
+                  <?php } ?>
+                  <input type="submit" value="Ver">
+                </select>
+                </form>
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 200px;">
                     <input type="text" name="table_search" class="form-control float-right" placeholder="Busqueda">
@@ -93,7 +134,25 @@ if(isset($_GET['del'])){
                   </thead>
                   <tbody>
 
-                    <?php foreach(businessObtenerProductos() as $prod){?>
+           <?php foreach (businessObtenerProductos() as $prod){ 
+                $print = true;
+
+					if(!empty($_GET['seleccionProucto']) AND $print){
+						if($prod['id'] != $_GET['seleccionProucto']) $print = FALSE;
+					}
+					if(!empty($_GET['seleccionTipos']) AND $print){
+						if($prod['categotiaTipo'] != $_GET['seleccionTipos']) $print = FALSE;
+					}
+
+          if(!empty($_GET['seleccionUvas']) AND $print){
+						if($prod['categotiaUva'] != $_GET['seleccionUvas']) $print = FALSE;
+					}
+          if(!empty($_GET['seleccionMarcas']) AND $print){
+						if($prod['marca'] != $_GET['seleccionMarcas']) $print = FALSE;
+					}
+
+				 	if($print){ ?>
+
                     <tr>
                       <td><?php echo $prod ['id']?></td>
                       <td><?php echo $prod ['nombre']?></td>
@@ -110,7 +169,11 @@ if(isset($_GET['del'])){
                       <a href="productsList.php?del=<?php echo $prod ['id']?>"><span class="material-icons">delete</span></a>
                       </td>
                     </tr>
-                    <?php }?>
+
+
+
+
+            <?php } } ?>
                     
                   </tbody>
                 </table>
